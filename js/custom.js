@@ -6,6 +6,7 @@ $(document).ready(function() {
 	
 
 	//controls behavior of player div when selected
+
 	function selectPlayer(roundDiv) {
 		$('.player').click(function() {
 			roundDiv.find('.player').removeClass('selectedPlayer'); //remove selectedPlayer class from any player that may already have it 
@@ -16,10 +17,13 @@ $(document).ready(function() {
 
 
 	//builds the list of available players and appends it to the document
+
 	function positionSelection(round, position, roundDiv) {
 		var targetRound = parseInt(round); //change the round parameter into an integer for use below ...
 		var players = "";
+
 		//run through the player pool, and pick out the players that match the position selected for the particular round. Then build out the player divs for each of those players
+
 		$.each(playerPool, function(key, value) {
 			if ( playerPool[key].round === targetRound && playerPool[key].position === position ) {
 				players += "<div class='player' data-playerID='" + playerPool[key].playerID +"'>";
@@ -37,7 +41,8 @@ $(document).ready(function() {
 	}
 
 
-	//once a pick is made, we need to pass that id in to variables that the database can read
+	//once a pick is made, we need to pass that id into variables that the database can read
+
 	function makePick(round, playerID, nextRound) {
 		console.log(round, playerID, nextRound);
 		switch(round){
@@ -55,14 +60,19 @@ $(document).ready(function() {
 		}
 
 		$(nextRound).removeClass('noShow'); //display the next round
-			if (round === "round3") {
-				$('#playersPicked').html('');
-				$('.selectedPlayer').clone().appendTo('#playersPicked');
-				$('#yourPicks .player').removeClass('selectedPlayer');
-			}
+			
+		//if this is the last round, we're going to populate a final div with the user's picks with the selectedPlayer divs
+		if (round === "round3") {
+			$('#playersPicked').html(''); //clear that div in case they're changing a pick
+			$('.selectedPlayer').clone().appendTo('#playersPicked'); // clone the selectedPlayer divs, then add them to the playersPicked div
+			$('#yourPicks .player').removeClass('selectedPlayer'); // remove any selectedPlayer styling from those picks
+		}
 
-		$('html,body').animate({scrollTop: $(nextRound).offset().top}, 1000);
+		$('html,body').animate({scrollTop: $(nextRound).offset().top}, 1000); //scroll the window to the next div
 	}
+
+
+	//controls what happens when the "Make Pick" button is clicked ... 
 
 	$('.roundSubmitter').click(function(e) {
 		e.preventDefault(); //prevent the default behavior so we can scroll it
@@ -74,7 +84,9 @@ $(document).ready(function() {
 		makePick(roundSubmitted, playerSelected, nextRound);
 	})
 
+
 	//when a position is clicked ...
+
 	$('li').click(function(){
 
 		var roundClicked = $(this).data('round'); // ... grab the round that position belongs to
@@ -83,8 +95,6 @@ $(document).ready(function() {
 
 		positionSelection(roundClicked, positionClicked, roundDiv); // run the function that displays the players for that position in that round
 	})
-
-
 
 
 	//The variables that will have the names of your picks and will be passed into the database.
