@@ -1,9 +1,14 @@
 $(document).ready(function() {
 
+	//The variables that will have the names of your picks and will be passed into the database.
+	var firstRoundPick;
+	var secondRoundPick;
+	var thirdRoundPick;
+
 
 	//our pool of players to pick from
 	var playerPool=[{"playerID":"jameiswinston","firstname":"Jameis","lastname":"Winston","position":"qb","round":1,"school":"Florida State","playerHeight":"6'3\"","playerWeight":231,"sturmsays":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et sodales sem. Etiam suscipit justo eu ultrices facilisis. Quisque mollis faucibus turpis. Pellentesque a quam eget libero maximus auctor. Nulla pulvinar at tellus suscipit fringilla. Sed non lorem sed nunc aliquet suscipit. Integer arcu mauris, placerat id elementum vitae, lobortis vel est. Pellentesque blandit nisl pretium sodales luctus. Maecenas tempor magna a vulputate porta.","sturmlink":"http://www.dallasnews.com","machota":"machota"},{"playerID":"marcusmariota","firstname":"Marcus","lastname":"Mariota","position":"qb","round":1,"school":"Oregon","playerHeight":"6'3\"","playerWeight":222,"sturmsays":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et sodales sem. Etiam suscipit justo eu ultrices facilisis. Quisque mollis faucibus turpis. Pellentesque a quam eget libero maximus auctor. Nulla pulvinar at tellus suscipit fringilla. Sed non lorem sed nunc aliquet suscipit. Integer arcu mauris, placerat id elementum vitae, lobortis vel est. Pellentesque blandit nisl pretium sodales luctus. Maecenas tempor magna a vulputate porta.","sturmlink":"http://www.cnn.com"},{"playerID":"quarterbackthree","firstname":"Quarterback","lastname":"Three","position":"qb","round":1,"school":"Texas","playerHeight":"6'2\"","playerWeight":225,"sturmsays":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et sodales sem. Etiam suscipit justo eu ultrices facilisis. Quisque mollis faucibus turpis. Pellentesque a quam eget libero maximus auctor. Nulla pulvinar at tellus suscipit fringilla. Sed non lorem sed nunc aliquet suscipit. Integer arcu mauris, placerat id elementum vitae, lobortis vel est. Pellentesque blandit nisl pretium sodales luctus. Maecenas tempor magna a vulputate porta.","sturmlink":"http://www.utexas.edu"},{"playerID":"amaricooper","firstname":"Amari","lastname":"Cooper","position":"wr","round":2,"school":"Alabma","playerHeight":"6'0\"","playerWeight":211,"sturmsays":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et sodales sem. Etiam suscipit justo eu ultrices facilisis. Quisque mollis faucibus turpis. Pellentesque a quam eget libero maximus auctor. Nulla pulvinar at tellus suscipit fringilla. Sed non lorem sed nunc aliquet suscipit. Integer arcu mauris, placerat id elementum vitae, lobortis vel est. Pellentesque blandit nisl pretium sodales luctus. Maecenas tempor magna a vulputate porta.","sturmlink":"http://www.dallasnews.com"},{"playerID":"kevinwhite","firstname":"Kevin","lastname":"White","position":"wr","round":2,"school":"West Virginia","playerHeight":"6'2\"","playerWeight":215,"sturmsays":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et sodales sem. Etiam suscipit justo eu ultrices facilisis. Quisque mollis faucibus turpis. Pellentesque a quam eget libero maximus auctor. Nulla pulvinar at tellus suscipit fringilla. Sed non lorem sed nunc aliquet suscipit. Integer arcu mauris, placerat id elementum vitae, lobortis vel est. Pellentesque blandit nisl pretium sodales luctus. Maecenas tempor magna a vulputate porta.","sturmlink":"http://www.dallasnews.com","machota":"machota"},{"playerID":"devanteparker","firstname":"DeVante","lastname":"Parker","position":"wr","round":2,"school":"Louisville","playerHeight":"6'2\"","playerWeight":209,"sturmsays":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et sodales sem. Etiam suscipit justo eu ultrices facilisis. Quisque mollis faucibus turpis. Pellentesque a quam eget libero maximus auctor. Nulla pulvinar at tellus suscipit fringilla. Sed non lorem sed nunc aliquet suscipit. Integer arcu mauris, placerat id elementum vitae, lobortis vel est. Pellentesque blandit nisl pretium sodales luctus. Maecenas tempor magna a vulputate porta.","sturmlink":"http://www.dallasnews.com"},{"playerID":"leonardwilliams","firstname":"Leonard","lastname":"Williams","position":"de","round":2,"school":"USC","playerHeight":"6'4\"","playerWeight":302,"sturmsays":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et sodales sem. Etiam suscipit justo eu ultrices facilisis. Quisque mollis faucibus turpis. Pellentesque a quam eget libero maximus auctor. Nulla pulvinar at tellus suscipit fringilla. Sed non lorem sed nunc aliquet suscipit. Integer arcu mauris, placerat id elementum vitae, lobortis vel est. Pellentesque blandit nisl pretium sodales luctus. Maecenas tempor magna a vulputate porta.","sturmlink":"http://www.dallasnews.com"},{"playerID":"arikarmstead","firstname":"Arik","lastname":"Armstead","position":"de","round":2,"school":"Nebraska","playerHeight":"6'7\"","playerWeight":292,"sturmsays":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et sodales sem. Etiam suscipit justo eu ultrices facilisis. Quisque mollis faucibus turpis. Pellentesque a quam eget libero maximus auctor. Nulla pulvinar at tellus suscipit fringilla. Sed non lorem sed nunc aliquet suscipit. Integer arcu mauris, placerat id elementum vitae, lobortis vel est. Pellentesque blandit nisl pretium sodales luctus. Maecenas tempor magna a vulputate porta.","sturmlink":"http://www.dallasnews.com","machota":"machota"},{"playerID":"dantefowler","firstname":"Dante","lastname":"Fowler Jr.","position":"de","round":2,"school":"Florida State","playerHeight":"6'2\"","playerWeight":261,"sturmsays":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et sodales sem. Etiam suscipit justo eu ultrices facilisis. Quisque mollis faucibus turpis. Pellentesque a quam eget libero maximus auctor. Nulla pulvinar at tellus suscipit fringilla. Sed non lorem sed nunc aliquet suscipit. Integer arcu mauris, placerat id elementum vitae, lobortis vel est. Pellentesque blandit nisl pretium sodales luctus. Maecenas tempor magna a vulputate porta.","sturmlink":"http://www.dallasnews.com"},{"playerID":"brandonscherff","firstname":"Brandon","lastname":"Scherff","position":"ol","round":2,"school":"Iowa","playerHeight":"6'4\"","playerWeight":319,"sturmsays":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et sodales sem. Etiam suscipit justo eu ultrices facilisis. Quisque mollis faucibus turpis. Pellentesque a quam eget libero maximus auctor. Nulla pulvinar at tellus suscipit fringilla. Sed non lorem sed nunc aliquet suscipit. Integer arcu mauris, placerat id elementum vitae, lobortis vel est. Pellentesque blandit nisl pretium sodales luctus. Maecenas tempor magna a vulputate porta.","sturmlink":"http://www.dallasnews.com"},{"playerID":"andruspeat","firstname":"Andrus","lastname":"Peat","position":"ol","round":2,"school":"Stanford","playerHeight":"6'6\"","playerWeight":313,"sturmsays":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et sodales sem. Etiam suscipit justo eu ultrices facilisis. Quisque mollis faucibus turpis. Pellentesque a quam eget libero maximus auctor. Nulla pulvinar at tellus suscipit fringilla. Sed non lorem sed nunc aliquet suscipit. Integer arcu mauris, placerat id elementum vitae, lobortis vel est. Pellentesque blandit nisl pretium sodales luctus. Maecenas tempor magna a vulputate porta.","sturmlink":"http://www.dallasnews.com"},{"playerID":"cameronerving","firstname":"Cameron","lastname":"Erving","position":"ol","round":2,"school":"Florida State","playerHeight":"6'5\"","playerWeight":313,"sturmsays":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et sodales sem. Etiam suscipit justo eu ultrices facilisis. Quisque mollis faucibus turpis. Pellentesque a quam eget libero maximus auctor. Nulla pulvinar at tellus suscipit fringilla. Sed non lorem sed nunc aliquet suscipit. Integer arcu mauris, placerat id elementum vitae, lobortis vel est. Pellentesque blandit nisl pretium sodales luctus. Maecenas tempor magna a vulputate porta.","sturmlink":"http://www.dallasnews.com","machota":"machota"},{"playerID":"shaneray","firstname":"Shane","lastname":"Ray","position":"lb","round":3,"school":"Missouri","playerHeight":"6'2\"","playerWeight":245,"sturmsays":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et sodales sem. Etiam suscipit justo eu ultrices facilisis. Quisque mollis faucibus turpis. Pellentesque a quam eget libero maximus auctor. Nulla pulvinar at tellus suscipit fringilla. Sed non lorem sed nunc aliquet suscipit. Integer arcu mauris, placerat id elementum vitae, lobortis vel est. Pellentesque blandit nisl pretium sodales luctus. Maecenas tempor magna a vulputate porta.","sturmlink":"http://www.dallasnews.com"},{"playerID":"vicbeasley","firstname":"Vic","lastname":"Beasley","position":"lb","round":3,"school":"Clemson","playerHeight":"6'3\"","playerWeight":246,"sturmsays":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et sodales sem. Etiam suscipit justo eu ultrices facilisis. Quisque mollis faucibus turpis. Pellentesque a quam eget libero maximus auctor. Nulla pulvinar at tellus suscipit fringilla. Sed non lorem sed nunc aliquet suscipit. Integer arcu mauris, placerat id elementum vitae, lobortis vel est. Pellentesque blandit nisl pretium sodales luctus. Maecenas tempor magna a vulputate porta.","sturmlink":"http://www.dallasnews.com"},{"playerID":"eliharold","firstname":"Eli","lastname":"Harold","position":"lb","round":3,"school":"Virginia","playerHeight":"6'3\"","playerWeight":247,"sturmsays":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et sodales sem. Etiam suscipit justo eu ultrices facilisis. Quisque mollis faucibus turpis. Pellentesque a quam eget libero maximus auctor. Nulla pulvinar at tellus suscipit fringilla. Sed non lorem sed nunc aliquet suscipit. Integer arcu mauris, placerat id elementum vitae, lobortis vel est. Pellentesque blandit nisl pretium sodales luctus. Maecenas tempor magna a vulputate porta.","sturmlink":"http://www.dallasnews.com","machota":"machota"}]
-	
+
 
 	/*
 	----------------------------------
@@ -15,7 +20,7 @@ $(document).ready(function() {
 		$('.player').click(function() {
 			var round = $(this).data('round');
 			console.log(round);
-			$("#" + round).find('.player').removeClass('selectedPlayer'); //remove selectedPlayer class from any player that may already have it 
+			$("#" + round).find('.player').removeClass('selectedPlayer'); //remove selectedPlayer class from any player that may already have it
 			$(this).addClass('selectedPlayer'); //add it to the player that was selected
 			$("#" + round).children('.roundSubmitter').removeClass('noShow'); //show the make pick button
 		})
@@ -62,22 +67,22 @@ $(document).ready(function() {
 		console.log(round, playerID, nextRound);
 		console.log(pickThree);
 		switch(round){
-			case "round1": 
+			case "round1":
 				firstRoundPick = playerID;
 				break;
-			case "round2": 
+			case "round2":
 				secondRoundPick = playerID;
 				break;
-			case "round3": 
+			case "round3":
 				thirdRoundPick = playerID;
 				break;
-			default: 
+			default:
 				alert("Problem picking round");
 		}
 
 		$(nextRound).removeClass('noShow'); //display the next round
-		
-		
+
+
 		//if this is the last round, we're going to populate a final div with the user's picks with the selectedPlayer divs
 		if (round === "round3") {
 			$('#playersPicked').html(''); //clear that div in case they're changing a pick
@@ -86,15 +91,15 @@ $(document).ready(function() {
 			console.log("test:" + pickThree);
 
 		}
-	
+
 		if ( pickThree === true) {
 			console.log('three');
 			$('#playersPicked').html(''); //clear that div in case they're changing a pick
 			$('.selectedPlayer').clone().appendTo('#playersPicked'); // clone the selectedPlayer divs, then add them to the playersPicked div
-			
+
 			//appending a change pick button to each of the selected players
 			$.each($('#playersPicked .player'), function(key, value) {
-				var changePick = "<a class='changePick' href='#round" + (key + 1) + "'>Change pick</a>" 
+				var changePick = "<a class='changePick' href='#round" + (key + 1) + "'>Change pick</a>"
 				$(this).append(changePick);
 			})
 
@@ -103,8 +108,8 @@ $(document).ready(function() {
 				e.preventDefault();
 				var changeRound = $(this).attr('href');
 				$('html,body').animate({scrollTop: $(changeRound).offset().top}, 500);
-			})			
-			
+			})
+
 			$('#yourPicks .player').removeClass('selectedPlayer'); // remove any selectedPlayer styling from those picks
 			$('html,body').animate({scrollTop: $('#yourPicks').offset().top}, 500);
 		} else {
@@ -147,17 +152,18 @@ $(document).ready(function() {
 
 
 
-	//The variables that will have the names of your picks and will be passed into the database.
-	var firstRoundPick;
-	var secondRoundPick;
-	var thirdRoundPick;
+	/*
+	----------------------------------
+	SUBMIT DRAFT TO DATABASE
+	----------------------------------
+	*/
 
-	//.submitDraft is the button you click to post the data
-	$(".submitDraft").click(function () {
-		console.log("Submitting draft choices");
+	//#finalizeDraft is the button you click to post the data
+	$("#finalizeDraft").click(function () {
+		console.log("Submitting draft choices: "+firstRoundPick+", "+secondRoundPick+", "+thirdRoundPick);
 
 		//Post the stuff to the PHP script
-		$.post("http://www.jlsmith.net/work/nfldrafter/update.php", {
+		$.post("http://www.jlsmith.net/work/cowboysdrafter/update.php", {
 
 			//assign variables to their corresponding PHP variables
 			firstRoundPick: firstRoundPick,
@@ -170,9 +176,10 @@ $(document).ready(function() {
 			console.log("Data returned: " + data);
 			var returnedDataArray = data.split('|');
 
-			var firstRoundData = [parseInt(resultsArray[0]), parseInt(resultsArray[1])];
-			var secondRoundData = [parseInt(resultsArray[2]), parseInt(resultsArray[3])];
-			var thirdRoundData = [parseInt(resultsArray[4]), parseInt(resultsArray[5])];
+			//First number is number who picked just like you, second number is total
+			var firstRoundData = [parseInt(returnedDataArray[0]), parseInt(returnedDataArray[1])];
+			var secondRoundData = [parseInt(returnedDataArray[2]), parseInt(returnedDataArray[3])];
+			var thirdRoundData = [parseInt(returnedDataArray[4]), parseInt(returnedDataArray[5])];
 
 			console.log("First round: " + firstRoundData);
 			console.log("Second round: " + secondRoundData);
@@ -208,7 +215,11 @@ $(document).ready(function() {
 
 });
 
-//THIS IS THE FUNCTION THAT WILL ACTUALLY DRAW THE D3 DONUTS
+/*
+----------------------------------
+FUNCTION TO DRAW CHARTS
+----------------------------------
+*/
 function drawCharts(data, target) {
 	console.log("in drawCharts with " + data + " and " + target);
 }
