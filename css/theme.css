@@ -1003,3 +1003,17 @@ p:last-child {
 	text-transform: uppercase;
 	display: inline-block;
 }
+
+#clock {
+	position: fixed;
+	z-index: 5000;
+	right: 15px;
+	text-align: center;
+	background-color: darkslategrey;
+	color: whitesmoke;
+	width: 100px;
+	line-height: 30px;
+	font-size: 2em;
+	padding: 10px;
+	font-family: sans-serif;
+}
