@@ -1017,3 +1017,73 @@ p:last-child {
 	padding: 10px;
 	font-family: sans-serif;
 }
+
+
+
+/* TEST AREA */
+
+.playerList {
+	width: 35%;
+	float: left;
+}
+.playerBlock {
+	width: 100%;
+	display: block;
+	clear: left;
+background: rgb(238,238,238); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(238,238,238,1) 0%, rgba(204,204,204,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(238,238,238,1)), color-stop(100%,rgba(204,204,204,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */
+	border-bottom: 1px solid #777777;
+	border-top: 1px solid #777777;
+	position: relative;
+	height: 50px;
+}
+.playerBlock h4, .playerBlock img {
+	float: left;
+	text-align: left;
+}
+.playerBlock h4 {
+	width: calc(100% - 80px);
+	margin-bottom: 0;
+	line-height: 50px;
+	padding-left: 10px;
+}
+
+.playerBlock img {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	margin-right: 10px;
+	margin-top: 10px;
+	cursor: pointer;
+	z-index: 20;
+	position: relative;
+}
+.playerView {
+	width: 62%;
+	float: right;
+}
+
+.selectedBlock {
+	background: blue !important;
+	border: 1px solid white;
+}
+.selectedBlock:after {
+	content: '';
+	display: block;
+	height: 36px;
+	width: 36px;
+	-ms-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+	background: blue;
+	position: absolute;
+	top: 7px;
+	right: -18px;
+	border: 1px solid white;
+}
