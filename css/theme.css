@@ -908,8 +908,6 @@ p:last-child {
 	}
 }
 
-
-
 .round {
 	font-family: 'Open Sans', Arial, sans-serif;
 	text-align: center;
@@ -958,39 +956,6 @@ p:last-child {
 	text-align: left;
 }
 
-.player {
-	width: 30%;
-	margin-right: 5%;
-	float: left;
-	padding: 1.2rem;
-	transition: all .2s ease-out;
-	cursor: pointer;
-}
-
-.player .lastname {
-	display: block;
-	font-size: 3.6rem;
-	text-transform: uppercase;
-	line-height: 4.2rem;
-}
-
-.player:nth-of-type(3) {
-	margin-right: 0;
-}
-
-.player:hover {
-	background-color: rgb(245,245,245);
-}
-#yourPicks .player:hover {
-	background-color: rgb(255,255,255);
-}
-
-.player p {
-	font-size: 1.4rem;
-	line-height: 1.8rem;
-	margin-bottom: .6rem;
-}
-
 .selectedPlayer {
 	background-color: rgb(245,245,245);
 }
@@ -1014,59 +979,110 @@ p:last-child {
 	width: 100px;
 	line-height: 30px;
 	font-size: 2em;
-	padding: 10px;
+	padding: 10px; 
 	font-family: sans-serif;
 }
 
 
 
-/* TEST AREA */
-
 .playerList {
-	width: 35%;
-	float: left;
-}
-.playerBlock {
-	width: 100%;
-	display: block;
-	clear: left;
-background: rgb(238,238,238); /* Old browsers */
-background: -moz-linear-gradient(top,  rgba(238,238,238,1) 0%, rgba(204,204,204,1) 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(238,238,238,1)), color-stop(100%,rgba(204,204,204,1))); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%); /* IE10+ */
-background: linear-gradient(to bottom,  rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */
-	border-bottom: 1px solid #777777;
-	border-top: 1px solid #777777;
-	position: relative;
-	height: 50px;
-}
-.playerBlock h4, .playerBlock img {
-	float: left;
-	text-align: left;
-}
-.playerBlock h4 {
-	width: calc(100% - 80px);
-	margin-bottom: 0;
-	line-height: 50px;
-	padding-left: 10px;
+	margin: 0 auto;
 }
 
-.playerBlock img {
-	width: 30px;
-	height: 30px;
-	border-radius: 50%;
-	margin-right: 10px;
-	margin-top: 10px;
+.round .playerList li {
+	width: 19%;
+	display: inline-block;
+	margin-right: 1%;
+	font-size: 1.4rem;
+	background-color: rgb(235,235,235);
 	cursor: pointer;
-	z-index: 20;
+	border-radius: 3px;
+	color: #545454;
+}
+
+.playerList li:hover {
+	background-color: #0074d9;
+	color: white;
+}
+
+.playerList li:last-of-type {
+	margin-right: 0;
+}
+
+.playerList li.viewing {
+	background-color: #0074d9;
+	color: white;
+}
+
+.playerList li.picked:before {
+	content:'\2713 \0020';
+}
+
+.playerModule {
+	width: 70%;
+	margin: 0 auto;
 	position: relative;
 }
+
 .playerView {
-	width: 62%;
+	text-align: left;
+	background-color: rgb(235,235,235);
+	padding: 2rem;
+	display: none;
+}
+
+.viewable {
+	display: block;
+}
+
+.playerView p {
+	max-width: none;
+	position: relative;
+}
+
+.playerView img {
+	float: left;
+	width: 150px;
+	margin-right: 2rem;
+	margin-bottom: 2rem;
+}
+
+.playerView .checkMark {
+	position: absolute;
+	float: none;
+	width: 50px;
+	margin: 0 0;
+	top: -15px;
+	right: -15px;
+	cursor: pointer;
+}
+
+.stats {
+	width: calc(100% - 170px);
+	display: block;
+	clear: right;
 	float: right;
+}
+
+.playerView .playerStat {
+	width: 30%;
+	margin-right: 2.5%;
+	padding-right: 2.5%;
+	border-right: 1px solid #545454;
+	float: left;
+	max-width: 150px;
+	text-align: center;
+}
+
+.playerView .playerStat .label {
+	display: block;
+}
+
+.playerView .lastStat {
+	margin-right: 0;
+	padding-right: 0;
+	border-right: none;
+	clear: right;
 }
 
 .selectedBlock {

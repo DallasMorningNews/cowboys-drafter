@@ -1,5 +1,5 @@
 -- Add buttons below selected players that allow users to repick a player/position for each round. Button would jump user back up to specific round
--- Add in "Machota's pick" functionality, with Machota's head
+-- Add in "Machota's Pick" label
 -- Write styles (in the .css file, of course)
--- Add in mugshots to the player divs. This needs to be added to the spreadsheet as well
+-- Gather mugshots
 -- Profit!

@@ -119,42 +119,27 @@
 
 				<!-- story goes here -->
 				<div id="round0" class="round clearFix">
-					<div class="playerList">
-						<div class="playerBlock clearFix selectedBlock">
-							<h4>Player Name</h4>
-							<img class="circleImage selector" src="images/defaultImage.jpg" alt="Selctor" />
-							<img class="circleImage" src="images/defaultImage.jpg" alt="Machoata" />
-						</div>
-						<div class="playerBlock clearFix">
-							<h4>Player Name</h4>
-							<img class="circleImage selector" src="images/defaultImage.jpg" alt="Selctor" />
-							<img class="circleImage" src="images/defaultImage.jpg" alt="Machoata" />
-						</div>
-						<div class="playerBlock clearFix">
-							<h4>Player Name</h4>
-							<img class="circleImage selector" src="images/defaultImage.jpg" alt="Selctor" />
-							<img class="circleImage" src="images/defaultImage.jpg" alt="Machoata" />
-						</div>
-						<div class="playerBlock clearFix">
-							<h4>Player Name</h4>
-							<img class="circleImage selector" src="images/defaultImage.jpg" alt="Selctor" />
-							<img class="circleImage" src="images/defaultImage.jpg" alt="Machoata" />
-						</div>
-						<div class="playerBlock clearFix">
-							<h4>Player Name</h4>
-							<img class="circleImage selector" src="images/defaultImage.jpg" alt="Selctor" />
-							<img class="circleImage" src="images/defaultImage.jpg" alt="Machoata" />
-						</div>																								
+					<div class="playerList clearFix">
+						<p>Jameis Winston</p>
+						<p>Marcus Mariotta</p>
+						<p>Quarterback Three</p>
+						<p>Quarterback Four</p>
+						<p>Quarterback Five</p>			
 					</div>
 					<!-- end playerList -->
 
-					<div class="playerView">
-						<h5>First</h5>
-						<h4>Last name</h4>
-						<p>School</p>
-						<p>Height</p>
-						<p>Weight</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id vestibulum est, aliquet bibendum ipsum. Sed vitae feugiat elit, at ultrices mauris. Integer vulputate suscipit mollis. Sed a diam mi. Integer nec convallis leo. Pellentesque vel malesuada felis. Suspendisse potenti. Nunc vel arcu vitae ante aliquam condimentum eget id diam. Nulla pharetra enim ac est sagittis, at placerat libero fringilla. Quisque semper mi velit, et faucibus tortor egestas id. Duis leo purus, elementum at libero sit amet, fringilla dictum tellus.</p>
+					<div class="playerModule clearFix">
+						<div class="playerView clearFix viewable">
+							<img src="images/testMug.jpg" alt="#" />
+							<h3>Jameis <span class="lastName">Winston</span></h3>
+							<div class="stats clearFix">
+								<p class="playerStat"><span class="label">School</span>Florida State</p>
+								<p class="playerStat"><span class="label">Height</span>6'2"</p>
+								<p class="playerStat lastStat"><span class="label">Weight</span>215</p>
+							</div>
+							<p class="blurb"><strong>STURM SAYS:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id vestibulum est, aliquet bibendum ipsum. Sed vitae feugiat elit, at ultrices mauris. Integer vulputate suscipit mollis. Sed a diam mi. Integer nec convallis leo. Pellentesque vel malesuada felis. Suspendisse potenti. Nunc vel arcu vitae ante aliquam condimentum eget id diam. Nulla pharetra enim ac est sagittis, at placerat libero fringilla. Quisque semper mi velit, et faucibus tortor egestas id. Duis leo purus, elementum at libero sit amet, fringilla dictum tellus. <a href="givethisalinke">Read More</a></p>
+							<img class='checkMark' src='images/uncheck.svg' alt='unchecked' />
+						</div>
 					</div>
 
 				</div>
@@ -176,7 +161,8 @@
 					<div class="players noShow">
 						<h4 class="playerHeader">Here are the projected <span class="position">positions</span> for the first round</h4>
 						<p class="instructions">Select a player, then click the "Make Pick" button</p>
-						<div class="availablePlayers clearFix"></div>
+						<ul class="playerList clearFix"></ul>
+						<div class="playerModule"></div>	
 					</div>
 					<!-- end players -->
 					<a href="#round2" class="roundSubmitter noShow" data-round="round1">Make Pick!</a>
@@ -200,7 +186,8 @@
 					<div class="players noShow">
 						<h4 class="playerHeader">Here are the projected <span class="position">position</span> for the second round</h4>
 						<p class="instructions">Select a player, then click the "Make Pick" button</p>
-						<div class="availablePlayers clearFix"></div>
+						<ul class="playerList clearFix"></ul>
+						<div class="playerModule"></div>
 					</div>
 					<!-- end players -->
 					<a href="#round3" class="roundSubmitter noShow" data-round="round2">Make Pick!</a>
@@ -224,7 +211,8 @@
 					<div class="players noShow">
 						<h4 class="playerHeader">Here are the projected <span class="position">position</span> for the third round</h4>
 						<p class="instructions">Select a player, then click the "Make Pick" button</p>
-						<div class="availablePlayers clearFix"></div>
+						<ul class="playerList clearFix"></ul>
+						<div class="playerModule"></div>
 					</div>
 					<!-- end players -->
 					<a href="#yourPicks" class="roundSubmitter noShow" data-round="round3">Make Pick!</a>
