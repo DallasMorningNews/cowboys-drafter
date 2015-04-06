@@ -52,7 +52,7 @@ $(document).ready(function() {
 		$('.player').click(function() { //when a player is clicked in the list ...
 			var playerSelected = $(this).data('playerid'); //grab that player's id
 			var round = $(this).data('round'); // and his round
-			
+
 			$("#" + round).find('.player').removeClass('viewing') // turn the background color off any player already being viewed
 			$(this).addClass('viewing'); // turn on the background color for the player being viewed
 			$("#" + round).find('.playerView').removeClass('viewable'); //find all player Modules within that round and hide them, in case one is being displayed
@@ -160,9 +160,9 @@ $(document).ready(function() {
 			})
 
 			$('#yourPicks .player').removeClass('selectedPlayer'); // remove any selectedPlayer styling from those picks
-			$('html,body').animate({scrollTop: $('#yourPicks').offset().top}, 500);
+			$('html,body').animate({scrollTop: $('#yourPicks').offset().top - 50}, 500);
 		} else {
-			$('html,body').animate({scrollTop: $(nextRound).offset().top}, 500); //scroll the window to the next div
+			$('html,body').animate({scrollTop: $(nextRound).offset().top - 50}, 500); //scroll the window to the next div
 		}
 	}
 
