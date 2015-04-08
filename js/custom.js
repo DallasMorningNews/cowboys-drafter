@@ -210,6 +210,24 @@ $(document).ready(function() {
 		var roundClicked = $(this).data('round'); // ... grab the round that position belongs to
 		var positionClicked = $(this).data('position'); //.. grab the position that was clicked
 		var roundDiv = $('#round' + roundClicked); //.. grab the round div that that position was clicked in
+		$(roundDiv).find('li').removeClass('activePosition'); //removing the styling of a selected position
+		$(this).addClass('activePosition'); //adding the selected position styling to the position clicked
+
+		var p; //setting an empty variable that will hold the proper name of the position clicked
+		//determining which position clicked, and setting that variable
+		switch(positionClicked) {
+			case "qb": p = "quarterbacks";break;
+			case "rb": p = "running backs";break;
+			case "wr": p = "wide receivers";break;
+			case "te": p = "tight ends";break;
+			case "ol": p = "offensive linemen";break;
+			case "dl": p = "defensive linemen";break;
+			case "lb": p = "linebackers";break;
+			case "db": p = "defensive backs";break;
+			default: console.log("There was a problem with the position picked.");
+		}
+
+		$(roundDiv).find('.position').html(p); //assigning the proper position name to the positions span
 
 		positionSelection(roundClicked, positionClicked, roundDiv); // run the function that displays the players for that position in that round
 	})
