@@ -26,12 +26,12 @@ $(document).ready(function() {
 			var playerSelected = $(this).parent().data('playerid');
 
 			$("#" + round).find('.checkMark').attr('src', 'images/uncheck.svg'); //remove the selected checkmark for all players in this round. This is to accommodate changing selected players
-			$(this).attr('src', 'images/check.svg'); //add the selected checkmark to the player selected 
+			$(this).attr('src', 'images/check.svg'); //add the selected checkmark to the player selected
 			$("#" + round).find('.playerView').removeClass('selectedPlayer'); //remove the selectedPlayer class from all players in this round. This is to accommodate changing selected players
 			$(this).parent().addClass('selectedPlayer'); //add the selected player class to the selected player
 			$("#" + round).children('.roundSubmitter').removeClass('noShow'); //show the make pick button
 			$('#' + round).find('.player').removeClass('picked'); //remove the check mark from the player button of any player already selected
-			$.each($('.player'), function(key, value) { 
+			$.each($('.player'), function(key, value) {
 				if ($(this).data('playerid') === playerSelected && $(this).data('round') === round) { //find the matching player from the player list and add a check mark to the selected player
 					$(this).addClass('picked');
 				}
@@ -42,7 +42,7 @@ $(document).ready(function() {
 
 	/*
 	----------------------------------
-	DISPLAYING THE PLAYER MODULES 
+	DISPLAYING THE PLAYER MODULES
 	----------------------------------
 	*/
 
@@ -54,7 +54,7 @@ $(document).ready(function() {
 			$("#" + round).find('.player').removeClass('viewing') // turn the background color off any player already being viewed
 			$(this).addClass('viewing'); // turn on the background color for the player being viewed
 			$("#" + round).find('.playerView').removeClass('viewable'); //find all player Modules within that round and hide them, in case one is being displayed
-			$.each($('.playerView'), function(key, value) { 
+			$.each($('.playerView'), function(key, value) {
 				if ($(this).data('playerid') === playerSelected && $(this).data('round') === round) { //find the matching player module to the player clicked, and make that module viewable
 					$(this).addClass('viewable');
 				}
@@ -296,6 +296,43 @@ $(document).ready(function() {
 	});
 
 });
+
+
+/*
+----------------------------------
+SHARE CODE
+----------------------------------
+Change this link, but note that it is URI encoded.
+Try this: var encoded = encodeURIComponent(str);
+Or got to http://meyerweb.com/eric/tools/dencoder/ and do it manually.
+*/
+
+var uriLink="http%3A%2F%2Fres.dallasnews.com%2Ftest%2Flayne%2FcandidateBFF%2Fcruz%2Findex.html"; //Used in Twitter post but run it through bit.ly first.
+
+//If nothing is set I believe it will just grab the OG meta tags.
+
+var name = "The name variable"; //vars we'll build out and send to Facebook and Twitter;
+var caption = "The caption variable, optional";//leave as an empty string if not used ""
+var description = "The description variable";
+var hashtags = "hashtag"; //variable will equate to "#hashtag" to Twitter post
+
+//Assumes Facebook share button
+$("#facebookButton").click(function () {
+	console.log("Share to Facebook");
+	FB.ui({
+		method: 'feed',
+		name: name,
+		link: 'http://res.dallasnews.com/...',
+		caption: '', //You can put variables in here
+		picture: storyIMG,
+		description: description
+	});
+});
+
+$("#twitterButton").click(function () {
+	window.open("https://www.twitter.com/intent/tweet?&hashtags=" + hashtags + "&text=" + description + "&via=dallasnews&url=" + uriLink + "&image=" + storyIMG, "top=200, left=200,width=550,height=420");
+});
+
 
 /*
 ----------------------------------
