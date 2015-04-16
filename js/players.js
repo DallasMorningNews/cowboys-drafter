@@ -8,7 +8,7 @@ var playerPool = [
 		"school": "Baylor",
 		"playerheight": "6'2\"",
 		"playerweight": 230,
-		"playermug": "petty"
+		"playermug": "images/petty.jpg"
 	},
 	{
 		"playerid": "garrettgrayson",
@@ -19,7 +19,7 @@ var playerPool = [
 		"school": "Colorado State",
 		"playerheight": "6'2\"",
 		"playerweight": 213,
-		"playermug": "grayson"
+		"playermug": "images/grayson.jpg"
 	},
 	{
 		"playerid": "bretthundley",
@@ -30,7 +30,7 @@ var playerPool = [
 		"school": "UCLA",
 		"playerheight": "6'3\"",
 		"playerweight": 226,
-		"playermug": "hundley"
+		"playermug": "images/hundley.jpg"
 	},
 	{
 		"playerid": "brycepetty",
@@ -41,7 +41,7 @@ var playerPool = [
 		"school": "Baylor",
 		"playerheight": "6'2\"",
 		"playerweight": 230,
-		"playermug": "petty"
+		"playermug": "images/petty.jpg"
 	},
 	{
 		"playerid": "garrettgrayson",
@@ -52,7 +52,7 @@ var playerPool = [
 		"school": "Colorado State",
 		"playerheight": "6'2\"",
 		"playerweight": 213,
-		"playermug": "grayson"
+		"playermug": "images/grayson.jpg"
 	},
 	{
 		"playerid": "bretthundley",
@@ -63,7 +63,7 @@ var playerPool = [
 		"school": "UCLA",
 		"playerheight": "6'3\"",
 		"playerweight": 226,
-		"playermug": "hundley"
+		"playermug": "images/hundley.jpg"
 	},
 	{
 		"playerid": "brycepetty",
@@ -74,7 +74,7 @@ var playerPool = [
 		"school": "Baylor",
 		"playerheight": "6'2\"",
 		"playerweight": 230,
-		"playermug": "petty"
+		"playermug": "images/petty.jpg"
 	},
 	{
 		"playerid": "garrettgrayson",
@@ -85,7 +85,7 @@ var playerPool = [
 		"school": "Colorado State",
 		"playerheight": "6'2\"",
 		"playerweight": 213,
-		"playermug": "grayson"
+		"playermug": "images/grayson.jpg"
 	},
 	{
 		"playerid": "bretthundley",
@@ -96,7 +96,7 @@ var playerPool = [
 		"school": "UCLA",
 		"playerheight": "6'3\"",
 		"playerweight": 226,
-		"playermug": "hundley"
+		"playermug": "images/hundley.jpg"
 	},
 	{
 		"playerid": "seanmannion",
@@ -107,7 +107,7 @@ var playerPool = [
 		"school": "Oregon State",
 		"playerheight": "6'6\"",
 		"playerweight": 229,
-		"playermug": "mannion"
+		"playermug": "images/mannion.jpg"
 	},
 	{
 		"playerid": "toddgurley",
@@ -120,7 +120,7 @@ var playerPool = [
 		"playerweight": 222,
 		"sturmsays": "Sometimes a guy comes along and just looks like he is playing with kids who are younger trying to stop him – yet, he is playing in the SEC where NFL prospects are on nearly every team he plays against.  He is just a dazzling player with uncommon traits and a combination that can beat you in a number of ways.  His ACL injury actually benefits a team like Dallas because maybe that is how a guy like that falls all the way to #27.  I doubt he falls that far, but I have been asked a number of times if I would take him if he does drop to Dallas, despite the needs this team has elsewhere.  My answer is not even required a 2nd thought.  Absolutely.  He is a guy who appears to be a stud and as close to a can’t miss prospect at RB that we have seen in a half-dozen drafts.  I don’t know how he would get to #27, but it would require no hesitation.  He is going to be something in the NFL.",
 		"sturmlink": "http://cowboysblog.dallasnews.com/2015/02/2015-draft-profile-todd-gurley-rb-georgia.html/",
-		"playermug": "gurley"
+		"playermug": "images/gurley.jpg"
 	},
 	{
 		"playerid": "melvingordon",
@@ -133,7 +133,7 @@ var playerPool = [
 		"playerweight": 215,
 		"sturmsays": "The question that everyone wants to know is whether he rates higher or lower than Todd Gurley.  I would argue that due to the uncommon size and speed combo of Gurley, I would lean in that direction if all things were equal.  But an ACL injury to Gurley is nothing to ignore, and that might push some teams to Gordon.  I think that for a team like the Cowboys he fits like a hand in a glove because he is ready to plug and play and also has been running these plays for years.  He is a home-run hitter who may not have all of the boxes checked on the checklist, but he is absolutely a top RB quality about him.  There is no question that people are leery of Wisconsin running backs, but this guy should not be compared to Ron Dayne or Montee Ball.  He is a legitimate stud and a clear 1st round talent.",
 		"sturmlink": "http://cowboysblog.dallasnews.com/2015/02/2015-draft-profile-melvin-gordon-rb-wisconsin.html/",
-		"playermug": "gordon"
+		"playermug": "images/gordon.jpg"
 	},
 	{
 		"playerid": "tevincoleman",
@@ -146,7 +146,7 @@ var playerPool = [
 		"playerweight": 206,
 		"sturmsays": "Tevin Coleman is a terrific player and the kind of guy who can run for 2,000 yards with Indiana’s supporting cast has a chance to be great at any level.  But, Gurley and Gordon did more of the tough NFL inside runs to satisfy my questions on that front and the ability for them to always move the ball down the field and not be as reliant on the home run puts them a slot ahead of Coleman.  But, you can clearly see what he has and how he might be a better investment in the 2nd round than spending a 1st on those other two.  He also played with a broken toe for much of the season and that surgery kept him out of the combine.",
 		"sturmlink": "http://cowboysblog.dallasnews.com/2015/02/2015-nfl-draft-profile-tevin-coleman-rb-indiana.html/",
-		"playermug": "coleman"
+		"playermug": "images/coleman.jpg"
 	},
 	{
 		"playerid": "melvingordon",
@@ -159,7 +159,7 @@ var playerPool = [
 		"playerweight": 215,
 		"sturmsays": "The question that everyone wants to know is whether he rates higher or lower than Todd Gurley. I would argue that due to the uncommon size and speed combo of Gurley, I would lean in that direction if all things were equal. But an ACL injury to Gurley is nothing to ignore, and that might push some teams to Gordon. I think that for a team like the Cowboys he fits like a hand in a glove because he is ready to plug and play and also has been running these plays for years. He is a home-run hitter who may not have all of the boxes checked on the checklist, but he is absolutely a top RB quality about him. There is no question that people are leery of Wisconsin running backs, but this guy should not be compared to Ron Dayne or Montee Ball. He is a legitimate stud and a clear 1st round talent.",
 		"sturmlink": "http://cowboysblog.dallasnews.com/2015/02/2015-draft-profile-melvin-gordon-rb-wisconsin.html/",
-		"playermug": "gordon"
+		"playermug": "images/gordon.jpg"
 	},
 	{
 		"playerid": "tevincoleman",
@@ -172,7 +172,7 @@ var playerPool = [
 		"playerweight": 206,
 		"sturmsays": "Tevin Coleman is a terrific player and the kind of guy who can run for 2,000 yards with Indiana’s supporting cast has a chance to be great at any level.  But, Gurley and Gordon did more of the tough NFL inside runs to satisfy my questions on that front and the ability for them to always move the ball down the field and not be as reliant on the home run puts them a slot ahead of Coleman.  But, you can clearly see what he has and how he might be a better investment in the 2nd round than spending a 1st on those other two.  He also played with a broken toe for much of the season and that surgery kept him out of the combine.",
 		"sturmlink": "http://cowboysblog.dallasnews.com/2015/02/2015-nfl-draft-profile-tevin-coleman-rb-indiana.html/",
-		"playermug": "coleman"
+		"playermug": "images/coleman.jpg"
 	},
 	{
 		"playerid": "dukejohnson",
@@ -185,7 +185,7 @@ var playerPool = [
 		"playerweight": 207,
 		"sturmsays": "There is a lot to like here with Duke Johnson, as a zone runner with fantastic receiving skills and an attitude that you just have to love, he might be the type of guy who people wonder in 4 years why we were picking him apart when we should have been merely focusing on what makes him special.  If you were to focus on his strengths, you could really fall in love with what he brings to the table in so many regards.  But, if you want him to be your #1 RB, you might want to make sure your stable behind him is ready to pick up some of the workload just in case.",
 		"sturmlink": "http://cowboysblog.dallasnews.com/2015/02/nfl-draft-profile-duke-johnson-rb-miami.html/",
-		"playermug": "johnson"
+		"playermug": "images/johnson.jpg"
 	},
 	{
 		"playerid": "ameerabdullah",
@@ -198,7 +198,7 @@ var playerPool = [
 		"playerweight": 205,
 		"sturmsays": "When I see him, I see plenty of Warrick Dunn.  Dunn was almost 20 pounds lighter, but a 1st round pick who was small and tough to catch and ran for over 10,000 yards in the NFL.  An all-purpose threat who gives you everything he has to help you win.  I love his spirit and his determination and the fact that he told Auburn and Alabama that he wasn’t a defensive back. I know he does not fit all of the molds that we make for these guys and I know he has to protect the football, but I am a huge believer in trusting your eyes, and when it comes to guys who go between the mid-2nd and 3rd rounds, I will happily pound the table for Abdullah if I need a RB.",
 		"sturmlink": "http://cowboysblog.dallasnews.com/2015/02/nfl-draft-profile-ameer-abdullah-rb-nebraska.html/",
-		"playermug": "abdullah"
+		"playermug": "images/abdullah.jpg"
 	},
 	{
 		"playerid": "jayajayi",
@@ -211,7 +211,7 @@ var playerPool = [
 		"playerweight": 221,
 		"sturmsays": "I might have tipped my hands early, but I really like this guy to a point that if there was one guy you might cheer to fall to #60 in Round 2, this could be him.  He can just do it all and looks like a Day 1 starter who can pass protect, receive, and run inside or outside. Ajayi is a quality player that deserves to be in that conversation for 3rd best behind Gurley and Gordon.",
 		"sturmlink": "http://cowboysblog.dallasnews.com/2015/02/2015-nfl-draft-profile-jay-ajayi-rb-boise-state.html/",
-		"playermug": "ajayi"
+		"playermug": "images/ajayi.jpg"
 	},
 	{
 		"playerid": "dukejohnson",
@@ -224,7 +224,7 @@ var playerPool = [
 		"playerweight": 207,
 		"sturmsays": "There is a lot to like here with Duke Johnson, as a zone runner with fantastic receiving skills and an attitude that you just have to love, he might be the type of guy who people wonder in 4 years why we were picking him apart when we should have been merely focusing on what makes him special.  If you were to focus on his strengths, you could really fall in love with what he brings to the table in so many regards.  But, if you want him to be your #1 RB, you might want to make sure your stable behind him is ready to pick up some of the workload just in case.",
 		"sturmlink": "http://cowboysblog.dallasnews.com/2015/02/nfl-draft-profile-duke-johnson-rb-miami.html/",
-		"playermug": "johnson"
+		"playermug": "images/johnson.jpg"
 	},
 	{
 		"playerid": "ameerabdullah",
@@ -237,7 +237,7 @@ var playerPool = [
 		"playerweight": 205,
 		"sturmsays": "When I see him, I see plenty of Warrick Dunn.  Dunn was almost 20 pounds lighter, but a 1st round pick who was small and tough to catch and ran for over 10,000 yards in the NFL.  An all-purpose threat who gives you everything he has to help you win.  I love his spirit and his determination and the fact that he told Auburn and Alabama that he wasn’t a defensive back. I know he does not fit all of the molds that we make for these guys and I know he has to protect the football, but I am a huge believer in trusting your eyes, and when it comes to guys who go between the mid-2nd and 3rd rounds, I will happily pound the table for Abdullah if I need a RB.",
 		"sturmlink": "http://cowboysblog.dallasnews.com/2015/02/nfl-draft-profile-ameer-abdullah-rb-nebraska.html/",
-		"playermug": "abdullah"
+		"playermug": "images/abdullah.jpg"
 	},
 	{
 		"playerid": "jayajayi",
@@ -250,7 +250,7 @@ var playerPool = [
 		"playerweight": 221,
 		"sturmsays": "I might have tipped my hands early, but I really like this guy to a point that if there was one guy you might cheer to fall to #60 in Round 2, this could be him.  He can just do it all and looks like a Day 1 starter who can pass protect, receive, and run inside or outside. Ajayi is a quality player that deserves to be in that conversation for 3rd best behind Gurley and Gordon.",
 		"sturmlink": "http://cowboysblog.dallasnews.com/2015/02/2015-nfl-draft-profile-jay-ajayi-rb-boise-state.html/",
-		"playermug": "ajayi"
+		"playermug": "images/ajayi.jpg"
 	},
 	{
 		"playerid": "tjyeldon",
@@ -263,7 +263,7 @@ var playerPool = [
 		"playerweight": 226,
 		"sturmsays": "I know he is better than this, but right now he doesn’t look like he is on the same level as these other backs I have studied.  He looks heavier, plodding, less explosive, and frankly, appears to be running at 80% – especially against Auburn and Ohio State (the games late in the year) and at the Combine.  For me, it will require teams to operate under the premise of what he was in 2013 to take him in the top 60, and believe that once he heels and maybe drops 10 pounds that he goes back to being that special talent we have all known about for so long.  He definitely has attributes that you really like, but I am quite perplexed about the issues that jumped out at me when going through his 200 snaps to see the current version of TJ Yeldon. As it stands, I would not be certain at pick #60, which I am sure puts me in the minority.",
 		"sturmlink": "http://cowboysblog.dallasnews.com/2015/02/2015-nfl-draft-profile-tj-yeldon-rb-alabama.html/",
-		"playermug": "yeldon"
+		"playermug": "images/yeldon.jpg"
 	},
 	{
 		"playerid": "davidjohnson",
@@ -276,7 +276,7 @@ var playerPool = [
 		"playerweight": 224,
 		"sturmsays": "I am interested in David Johnson playing for my team, but I don’t know if I would ever consider him a clear RB1 until proven otherwise.  He might grow into it, but I would like a 2-man situation if I am going to select Johnson and make him demonstrate that he can do even more.  It is just so difficult to disregard that mountain of evidence that for this particular position, the speed of play is important and the major conferences dominate the successful lists in the last decade on Sundays.  That said, he has done so much and tested so well that you disregard his credentials at your own risk.  He checks many of the boxes for you to trust that he has some real ability, and with his special teams ability and his receiving, the floor on what he could be is still pretty good at the right price.  Sometimes it is best to admit that you aren’t sure. I am not sure.  I like him and he is talented, but I confess that my level of certainty changes depending on which game I am viewing.",
 		"sturmlink": "http://cowboysblog.dallasnews.com/2015/03/2015-nfl-draft-profile-david-johnson-rb-northern-iowa.html/",
-		"playermug": "johnson"
+		"playermug": "images/johnson.jpg"
 	},
 	{
 		"playerid": "breshadperriman",
@@ -287,7 +287,7 @@ var playerPool = [
 		"school": "UCF",
 		"playerheight": "6'2\"",
 		"playerweight": 212,
-		"playermug": "perriman"
+		"playermug": "images/perriman.jpg"
 	},
 	{
 		"playerid": "jaelenstrong",
@@ -298,7 +298,7 @@ var playerPool = [
 		"school": "Arizona State",
 		"playerheight": "6'2\"",
 		"playerweight": 217,
-		"playermug": "strong"
+		"playermug": "images/strong.jpg"
 	},
 	{
 		"playerid": "dorialgreenbeckham",
@@ -309,7 +309,7 @@ var playerPool = [
 		"school": "Missouri",
 		"playerheight": "6'5\"",
 		"playerweight": 237,
-		"playermug": "green-beckham"
+		"playermug": "images/green-beckham.jpg"
 	},
 	{
 		"playerid": "dorialgreenbeckham",
@@ -320,7 +320,7 @@ var playerPool = [
 		"school": "Missouri",
 		"playerheight": "6'5\"",
 		"playerweight": 237,
-		"playermug": "green-beckham"
+		"playermug": "images/green-beckham.jpg"
 	},
 	{
 		"playerid": "devinsmith",
@@ -331,7 +331,7 @@ var playerPool = [
 		"school": "Ohio State",
 		"playerheight": "6'0\"",
 		"playerweight": 196,
-		"playermug": "smith"
+		"playermug": "images/smith.jpg"
 	},
 	{
 		"playerid": "phillipdorsett",
@@ -342,7 +342,7 @@ var playerPool = [
 		"school": "Miami (FL)",
 		"playerheight": "5'9\"",
 		"playerweight": 185,
-		"playermug": "dorsett"
+		"playermug": "images/dorsett.jpg"
 	},
 	{
 		"playerid": "nelsonagholor",
@@ -355,7 +355,7 @@ var playerPool = [
 		"playerweight": 198,
 		"sturmsays": "When evaluating guys like this, the first question is whether or not he is a true “#1 receiver” who can win against all the coverages and all of the attention.  Agholor is not at the top of this group with those alpha dogs who look like world beaters in the Top 10-15 picks.  Rather, he is going to be in that next class as either a 1b or a 2 type receiver who will also immediately impact your return game.  And you know, there is nothing wrong with any of that and as a guy who might grow into something more, I would have no problem with a player of this quality pretty early in the draft.  He is a fine play-making weapon who should provide some real quality for someone in what I assume would be early Round 2 or so.",
 		"sturmlink": "http://cowboysblog.dallasnews.com/2015/04/2015-nfl-draft-profile-nelson-agholor-wr-usc.html/",
-		"playermug": "agholor"
+		"playermug": "images/agholor.jpg"
 	},
 	{
 		"playerid": "devinfunchess",
@@ -366,7 +366,7 @@ var playerPool = [
 		"school": "Michigan",
 		"playerheight": "6'4\"",
 		"playerweight": 232,
-		"playermug": "funchess"
+		"playermug": "images/funchess.jpg"
 	},
 	{
 		"playerid": "tylerlockett",
@@ -377,7 +377,7 @@ var playerPool = [
 		"school": "Kansas State",
 		"playerheight": "5'9\"",
 		"playerweight": 182,
-		"playermug": "lockett"
+		"playermug": "images/lockett.jpg"
 	},
 	{
 		"playerid": "tylerlockett",
@@ -388,7 +388,7 @@ var playerPool = [
 		"school": "Kansas State",
 		"playerheight": "5'9\"",
 		"playerweight": 182,
-		"playermug": "lockett"
+		"playermug": "images/lockett.jpg"
 	},
 	{
 		"playerid": "rashadgreene",
@@ -399,7 +399,7 @@ var playerPool = [
 		"school": "Florida State",
 		"playerheight": "5'11\"",
 		"playerweight": 182,
-		"playermug": "greene"
+		"playermug": "images/greene.jpg"
 	},
 	{
 		"playerid": "tymontgomery",
@@ -410,7 +410,7 @@ var playerPool = [
 		"school": "Stanford",
 		"playerheight": "5'11\"",
 		"playerweight": 221,
-		"playermug": "montgomery"
+		"playermug": "images/montgomery.jpg"
 	},
 	{
 		"playerid": "sammiecoates",
@@ -421,7 +421,7 @@ var playerPool = [
 		"school": "Auburn",
 		"playerheight": "6'1\"",
 		"playerweight": 212,
-		"playermug": "coates"
+		"playermug": "images/coates.jpg"
 	},
 	{
 		"playerid": "justinhardy",
@@ -432,7 +432,7 @@ var playerPool = [
 		"school": "East Carolina",
 		"playerheight": "5'10\"",
 		"playerweight": 192,
-		"playermug": "hardy"
+		"playermug": "images/hardy.jpg"
 	},
 	{
 		"playerid": "stefondiggs",
@@ -443,7 +443,7 @@ var playerPool = [
 		"school": "Maryland",
 		"playerheight": "6'0\"",
 		"playerweight": 195,
-		"playermug": "diggs"
+		"playermug": "images/diggs.jpg"
 	},
 	{
 		"playerid": "maxxwilliams",
@@ -454,7 +454,7 @@ var playerPool = [
 		"school": "Minnesota",
 		"playerheight": "6'3\"",
 		"playerweight": 249,
-		"playermug": "williams"
+		"playermug": "images/williams.jpg"
 	},
 	{
 		"playerid": "maxxwilliams",
@@ -465,7 +465,7 @@ var playerPool = [
 		"school": "Minnesota",
 		"playerheight": "6'3\"",
 		"playerweight": 249,
-		"playermug": "williams"
+		"playermug": "images/williams.jpg"
 	},
 	{
 		"playerid": "maxxwilliams",
@@ -476,7 +476,7 @@ var playerPool = [
 		"school": "Minnesota",
 		"playerheight": "6'3\"",
 		"playerweight": 249,
-		"playermug": "williams"
+		"playermug": "images/williams.jpg"
 	},
 	{
 		"playerid": "clivewalford",
@@ -487,7 +487,7 @@ var playerPool = [
 		"school": "Miami (FL)",
 		"playerheight": "6'4\"",
 		"playerweight": 251,
-		"playermug": "walford"
+		"playermug": "images/walford.jpg"
 	},
 	{
 		"playerid": "clivewalford",
@@ -498,7 +498,7 @@ var playerPool = [
 		"school": "Miami (FL)",
 		"playerheight": "6'4\"",
 		"playerweight": 251,
-		"playermug": "walford"
+		"playermug": "images/walford.jpg"
 	},
 	{
 		"playerid": "clivewalford",
@@ -509,7 +509,7 @@ var playerPool = [
 		"school": "Miami (FL)",
 		"playerheight": "6'4\"",
 		"playerweight": 251,
-		"playermug": "walford"
+		"playermug": "images/walford.jpg"
 	},
 	{
 		"playerid": "jeffheuerman",
@@ -520,7 +520,7 @@ var playerPool = [
 		"school": "Ohio State",
 		"playerheight": "6'5\"",
 		"playerweight": 254,
-		"playermug": "heuerman"
+		"playermug": "images/heuerman.jpg"
 	},
 	{
 		"playerid": "jeffheuerman",
@@ -531,7 +531,7 @@ var playerPool = [
 		"school": "Ohio State",
 		"playerheight": "6'5\"",
 		"playerweight": 254,
-		"playermug": "heuerman"
+		"playermug": "images/heuerman.jpg"
 	},
 	{
 		"playerid": "jeffheuerman",
@@ -542,7 +542,7 @@ var playerPool = [
 		"school": "Ohio State",
 		"playerheight": "6'5\"",
 		"playerweight": 254,
-		"playermug": "heuerman"
+		"playermug": "images/heuerman.jpg"
 	},
 	{
 		"playerid": "roryanderson",
@@ -553,7 +553,7 @@ var playerPool = [
 		"school": "South Carolina",
 		"playerheight": "6'5\"",
 		"playerweight": 244,
-		"playermug": "anderson"
+		"playermug": "images/anderson.jpg"
 	},
 	{
 		"playerid": "roryanderson",
@@ -564,7 +564,7 @@ var playerPool = [
 		"school": "South Carolina",
 		"playerheight": "6'5\"",
 		"playerweight": 244,
-		"playermug": "anderson"
+		"playermug": "images/anderson.jpg"
 	},
 	{
 		"playerid": "roryanderson",
@@ -575,7 +575,7 @@ var playerPool = [
 		"school": "South Carolina",
 		"playerheight": "6'5\"",
 		"playerweight": 244,
-		"playermug": "anderson"
+		"playermug": "images/anderson.jpg"
 	},
 	{
 		"playerid": "andruspeat",
@@ -588,7 +588,7 @@ var playerPool = [
 		"playerweight": 313,
 		"sturmsays": "He is not a perfect prospect and doesn’t appear to be that variety of tackle that is earmarked for the first hour of the draft, but there is no doubt he goes in the first round because he plays the highly-coveted, under-supplied spot of left tackle.  He has traits that reminds me of someone who I undervalued back in 2011, but has really shown me the error in my ways, Boston College’s Anthony Castonzo (Colts).  Big, not really as strong or mean as I like, but agile and seemingly perfect for the zone scheme/pass attack that seems to look for the prototypical power forward body. A solid prospect without too many concerns at all.",
 		"sturmlink": "http://cowboysblog.dallasnews.com/2015/03/nfl-draft-profile-andrus-peat-lt-stanford.html/",
-		"playermug": "peat"
+		"playermug": "images/peat.jpg"
 	},
 	{
 		"playerid": "cameronerving",
@@ -601,7 +601,7 @@ var playerPool = [
 		"playerweight": 313,
 		"sturmsays": "Overall, in Erving, you have a versatile player who might be able to play anywhere on your offensive line in spurts, but I highly recommend you keep him at center because that one move turned his situation into a near lost cause into one of the more interesting and desirable OL prospects in this draft.  He just needed to find a spot where he is exceptional, and on the inside – center or either guard – he can dominate and really turn into an anchor that you set your line around. Dallas fans will tell you that everything on the offense started turning around when they got a top-class center in the middle to patrol any sort of challenges opponents would want to present.  Erving can be that guy for someone.",
 		"sturmlink": "http://cowboysblog.dallasnews.com/2015/03/2015-nfl-draft-profile-47-cameron-erving-ol-florida-state.html/",
-		"playermug": "erving"
+		"playermug": "images/erving.jpg"
 	},
 	{
 		"playerid": "ereckflowers",
@@ -614,7 +614,7 @@ var playerPool = [
 		"playerweight": 329,
 		"sturmsays": "There is a lot to look at here.  He is a very talented big man.  He is also a very young prospect.  To imagine him in 3 years is a very exciting possibility that he might be a very strong tackle – maybe even a left tackle.  He is as strong as you can imagine with 37 reps on the bench press and his feet are quite impressive. This one might come down to your coaching staff and your faith in them to bring him along. I think he has all the makings of a very good tackle and a guy that will watch your flank against big rushers for many years.  You almost have to run around a mountain to get to the QB with Flowers.",
 		"sturmlink": "http://cowboysblog.dallasnews.com/2015/03/2015-nfl-draft-profile-46-ereck-flowers-t-miami.html/",
-		"playermug": "flowers"
+		"playermug": "images/flowers.jpg"
 	},
 	{
 		"playerid": "tjclemmings",
@@ -627,7 +627,7 @@ var playerPool = [
 		"playerweight": 309,
 		"sturmsays": "I realize there are some things to slow our roll about and that his Senior Bowl was not the greatest showing ever, but despite that, I think Clemmings is very impressive and a player I would have no problem tabbing for the Top 32 picks. He has all of the tools you want in a tackle and although he still needs to learn as he goes, all of the tools are there in his toolbox. He looks like he will be very good for a very long time with those gifts and skills that he possesses. I would place him up there with the top tackles, perhaps slightly down based on being a exclusive right tackle.",
 		"sturmlink": "http://cowboysblog.dallasnews.com/2015/03/2015-nfl-draft-profile-tj-clemmings-t-pitt.html/",
-		"playermug": "clemmings"
+		"playermug": "images/clemmings.jpg"
 	},
 	{
 		"playerid": "djhumphries",
@@ -640,7 +640,7 @@ var playerPool = [
 		"playerweight": 307,
 		"sturmsays": "This player is very much a projection.  I can tell you in his present tense, he is not as polished or as competent as many others in this group.  But, when you consider his tools, his potential, and his overall ceiling, there are many scouts who have indicated this player might be the best candidate to be a “franchise left tackle” in this entire group.  Personally, I am the type of guy to go with what I know more, and therefore like Iowa’s Brandon Schreff and Miami’s Ereck Flowers more.",
 		"sturmlink": "http://cowboysblog.dallasnews.com/2015/03/2015-nfl-draft-profile-dj-humphries-t-florida.html/",
-		"playermug": "humphries"
+		"playermug": "images/humphries.jpg"
 	},
 	{
 		"playerid": "cedricogbuehi",
@@ -653,7 +653,7 @@ var playerPool = [
 		"playerweight": 306,
 		"sturmsays": "This is going to be a very interesting draft day situation, because he clearly has tools and at some point will be too good a value to not take and try to turn into a 1st round caliber product again.  But, I must tell you at this point – with the performance on tape, the injury, and the lack of being able to show his wares on the spring – he might be falling a ways.  I like that arm length and those feet and there are tapes where he is fine for 50 snaps in a row, but when you are looking for a tackle, you can be picky for those who have warts and see if they are still there in the 3rd or 4th round.  I don’t think he is in the Top 50 anymore...",
 		"sturmlink": "http://cowboysblog.dallasnews.com/2015/03/2015-nfl-draft-profile-49-cedric-ogbuehi-t-texas-am.html/",
-		"playermug": "ogbuehi"
+		"playermug": "images/ogbuehi.jpg"
 	},
 	{
 		"playerid": "jakefisher",
@@ -666,7 +666,7 @@ var playerPool = [
 		"playerweight": 306,
 		"sturmsays": "I get the interest from the zone-spread types who want 11 athletes, but I will always want more of a physical presence from my offensive linemen and perhaps try to find a better balance between speed and strength.  I want to know, if I am going to spend a 1st on him, that I can count on him to help get me a yard when I need to extend a drive or even a game. Fisher should be very solid as a NFL player and may continue to develop, but his ultimate upside is highly debated, and for me, I see him below the top tier of prospects for many of these questions.  In the end, I just don’t believe that linemen who look uncomfortable in tests of functional football strength are worthy of high investments. I could see late 2nd or 3rd round.",
 		"sturmlink": "http://cowboysblog.dallasnews.com/2015/03/2015-nfl-draft-profile-50-jake-fisher-t-oregon.html/",
-		"playermug": "fisher"
+		"playermug": "images/fisher.jpg"
 	},
 	{
 		"playerid": "lakentomlinson",
@@ -677,7 +677,7 @@ var playerPool = [
 		"school": "Duke",
 		"playerheight": "6'3\"",
 		"playerweight": 323,
-		"playermug": "tomlinson"
+		"playermug": "images/tomlinson.jpg"
 	},
 	{
 		"playerid": "lakentomlinson",
@@ -688,7 +688,7 @@ var playerPool = [
 		"school": "Duke",
 		"playerheight": "6'3\"",
 		"playerweight": 323,
-		"playermug": "tomlinson"
+		"playermug": "images/tomlinson.jpg"
 	},
 	{
 		"playerid": "trejackson",
@@ -699,7 +699,7 @@ var playerPool = [
 		"school": "Florida State",
 		"playerheight": "6'3\"",
 		"playerweight": 330,
-		"playermug": "jackson"
+		"playermug": "images/jackson.jpg"
 	},
 	{
 		"playerid": "trejackson",
@@ -710,7 +710,7 @@ var playerPool = [
 		"school": "Florida State",
 		"playerheight": "6'3\"",
 		"playerweight": 330,
-		"playermug": "jackson"
+		"playermug": "images/jackson.jpg"
 	},
 	{
 		"playerid": "ajcann",
@@ -721,7 +721,7 @@ var playerPool = [
 		"school": "South Carolina",
 		"playerheight": "6'2\"",
 		"playerweight": 313,
-		"playermug": "cann"
+		"playermug": "images/cann.jpg"
 	},
 	{
 		"playerid": "darylwilliams",
@@ -732,7 +732,7 @@ var playerPool = [
 		"school": "Oklahoma",
 		"playerheight": "6'5\"",
 		"playerweight": 327,
-		"playermug": "willaims"
+		"playermug": "images/willaims.jpg"
 	},
 	{
 		"playerid": "coreyrobinson",
@@ -743,7 +743,7 @@ var playerPool = [
 		"school": "South Carolina",
 		"playerheight": "6'6\"",
 		"playerweight": 324,
-		"playermug": "robinson"
+		"playermug": "images/robinson.jpg"
 	},
 	{
 		"playerid": "tysambrailo",
@@ -754,7 +754,7 @@ var playerPool = [
 		"school": "Colorado State",
 		"playerheight": "6'6\"",
 		"playerweight": 311,
-		"playermug": "sambrailo"
+		"playermug": "images/sambrailo.jpg"
 	},
 	{
 		"playerid": "donovansmith",
@@ -765,7 +765,7 @@ var playerPool = [
 		"school": "Penn State",
 		"playerheight": "6'5\"",
 		"playerweight": 338,
-		"playermug": "smith"
+		"playermug": "images/smith.jpg"
 	},
 	{
 		"playerid": "tyrusthompson",
@@ -776,7 +776,7 @@ var playerPool = [
 		"school": "Oklahoma",
 		"playerheight": "6'4\"",
 		"playerweight": 324,
-		"playermug": "thompson"
+		"playermug": "images/thompson.jpg"
 	},
 	{
 		"playerid": "malcombrown",
