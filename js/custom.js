@@ -82,7 +82,7 @@ $(document).ready(function() {
 				players += "<li class='player' data-playerid='" + value.playerid + "' data-round='round" + value.round + "'>" + value.firstname + " " + value.lastname +"</li>";
 
 				playerModules += "<div class='playerView clearFix' data-playerid='" + value.playerid + "' data-round='round" + value.round + "'>";
-				playerModules += "<img src='images/" + value.playermug + ".jpg' alt='" + value.firstname + " " + value.lastname + "' />"
+				playerModules += "<img src='" + value.playermug + "' alt='" + value.firstname + " " + value.lastname + "' />"
 				playerModules += "<h3 class='playerName'>" + value.firstname + " <span class='lastName'>" + value.lastname + "</span></h3>";
 				playerModules += "<div class='stats clearFix'>"
 				playerModules += "<p class='playerStat'><span class='label'>School</span> " + value.school + "</p>";
