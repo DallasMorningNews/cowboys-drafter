@@ -26,12 +26,12 @@ $(document).ready(function() {
 			var playerSelected = $(this).parent().data('playerid');
 
 			$("#" + round).find('.checkMark').attr('src', 'images/uncheck.svg'); //remove the selected checkmark for all players in this round. This is to accommodate changing selected players
-			$(this).attr('src', 'images/check.svg'); //add the selected checkmark to the player selected 
+			$(this).attr('src', 'images/check.svg'); //add the selected checkmark to the player selected
 			$("#" + round).find('.playerView').removeClass('selectedPlayer'); //remove the selectedPlayer class from all players in this round. This is to accommodate changing selected players
 			$(this).parent().addClass('selectedPlayer'); //add the selected player class to the selected player
 			$("#" + round).children('.roundSubmitter').removeClass('noShow'); //show the make pick button
 			$('#' + round).find('.player').removeClass('picked'); //remove the check mark from the player button of any player already selected
-			$.each($('.player'), function(key, value) { 
+			$.each($('.player'), function(key, value) {
 				if ($(this).data('playerid') === playerSelected && $(this).data('round') === round) { //find the matching player from the player list and add a check mark to the selected player
 					$(this).addClass('picked');
 				}
@@ -42,7 +42,7 @@ $(document).ready(function() {
 
 	/*
 	----------------------------------
-	DISPLAYING THE PLAYER MODULES 
+	DISPLAYING THE PLAYER MODULES
 	----------------------------------
 	*/
 
@@ -54,7 +54,7 @@ $(document).ready(function() {
 			$("#" + round).find('.player').removeClass('viewing') // turn the background color off any player already being viewed
 			$(this).addClass('viewing'); // turn on the background color for the player being viewed
 			$("#" + round).find('.playerView').removeClass('viewable'); //find all player Modules within that round and hide them, in case one is being displayed
-			$.each($('.playerView'), function(key, value) { 
+			$.each($('.playerView'), function(key, value) {
 				if ($(this).data('playerid') === playerSelected && $(this).data('round') === round) { //find the matching player module to the player clicked, and make that module viewable
 					$(this).addClass('viewable');
 				}
@@ -82,7 +82,7 @@ $(document).ready(function() {
 				players += "<li class='player' data-playerid='" + value.playerid + "' data-round='round" + value.round + "'>" + value.firstname + " " + value.lastname +"</li>";
 
 				playerModules += "<div class='playerView clearFix' data-playerid='" + value.playerid + "' data-round='round" + value.round + "'>";
-				playerModules += "<img src='" + value.playermug + "' alt='" + value.firstname + " " + value.lastname + "' />"
+				playerModules += "<img src='images/" + value.playermug + ".jpg' alt='" + value.firstname + " " + value.lastname + "' />"
 				playerModules += "<h3 class='playerName'>" + value.firstname + " <span class='lastName'>" + value.lastname + "</span></h3>";
 				playerModules += "<div class='stats clearFix'>"
 				playerModules += "<p class='playerStat'><span class='label'>School</span> " + value.school + "</p>";
