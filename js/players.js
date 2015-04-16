@@ -725,8 +725,7 @@ var playerPool = [
 		"school": "Florida State",
 		"playerheight": "6'3\"",
 		"playerweight": 330,
-		"machota": "X",
-		"playermug": "images/jackson.jpg"
+		"machota": "X"
 	},
 	{
 		"playerid": "trejackson",
@@ -736,8 +735,7 @@ var playerPool = [
 		"round": 3,
 		"school": "Florida State",
 		"playerheight": "6'3\"",
-		"playerweight": 330,
-		"playermug": "images/jackson.jpg"
+		"playerweight": 330
 	},
 	{
 		"playerid": "ajcann",
@@ -899,8 +897,7 @@ var playerPool = [
 		"playerweight": 293,
 		"machota": "X",
 		"sturmsays": "There is a lot to like and he will add quite a bit to a team’s defensive line. The questions are whether you want to pay the price to get him as he might be part of the answer, but not THE answer. You would need to use him properly and maybe limit his snaps to keep his energy high, but you can see that he would be a real nice fit with a team like the Cowboys who wish to have a 6-8 man rotation at all times. Under those circumstances, I would really value him. He may be somewhat redundant to the type of player Crawford is, but having them side by side on a 4-3 nickel rush is exciting.",
-		"sturmlink": "http://cowboysblog.dallasnews.com/2015/01/bob-sturms-2015-nfl-draft-profile-what-i-see-in-michael-bennett-dt-ohio-state.html/",
-		"playermug": "images/bennett.jpg"
+		"sturmlink": "http://cowboysblog.dallasnews.com/2015/01/bob-sturms-2015-nfl-draft-profile-what-i-see-in-michael-bennett-dt-ohio-state.html/"
 	},
 	{
 		"playerid": "gradyjarrett",
@@ -937,8 +934,7 @@ var playerPool = [
 		"round": 3,
 		"school": "Arizona State",
 		"playerheight": "6'3\"",
-		"playerweight": 307,
-		"playermug": "images/hardison.jpg"
+		"playerweight": 307
 	},
 	{
 		"playerid": "dariusphilon",
@@ -1037,8 +1033,7 @@ var playerPool = [
 		"school": "LSU",
 		"playerheight": "6'5\"",
 		"playerweight": 252,
-		"machota": "X",
-		"playermug": "images/hunter.jpg"
+		"machota": "X"
 	},
 	{
 		"playerid": "henryanderson",
@@ -1166,8 +1161,7 @@ var playerPool = [
 		"round": 2,
 		"school": "Clemson",
 		"playerheight": "6'2\"",
-		"playerweight": 243,
-		"playermug": "images/anthony.jpg"
+		"playerweight": 243
 	},
 	{
 		"playerid": "bernardrickmckinney",
@@ -1180,8 +1174,7 @@ var playerPool = [
 		"playerweight": 246,
 		"machota": "X",
 		"sturmsays": "Overall, there are too many questions to value him in the Top 2 rounds (where you want a guy who you are sure can come right in and be a starter).  I have no doubts that he will be a useful roster player and may even overachieve as so many linebacker have over the course of time, and play a decade. But you want way more answers than questions if you take a guy at the top of your draft and I really don’t feel comfortable tabbing him with a high investment.  I believe that he does not have enough top-end athleticism for assured success on Sundays.",
-		"sturmlink": "http://cowboysblog.dallasnews.com/2015/02/sturm-draft-profile-benardrick-mckinney-lb-mississippi-state.html/",
-		"playermug": "images/mckinney.jpg"
+		"sturmlink": "http://cowboysblog.dallasnews.com/2015/02/sturm-draft-profile-benardrick-mckinney-lb-mississippi-state.html/"
 	},
 	{
 		"playerid": "nateorchard",
@@ -1246,8 +1239,7 @@ var playerPool = [
 		"school": "LSU",
 		"playerheight": "6'0\"",
 		"playerweight": 227,
-		"machota": "X",
-		"playermug": "images/alexander.jpg"
+		"machota": "X"
 	},
 	{
 		"playerid": "lorenzomauldin",
@@ -1274,7 +1266,8 @@ var playerPool = [
 		"playerweight": 197,
 		"machota": "X",
 		"sturmsays": "Unfortunately, there was a lot here that I didn’t care for.  He is just not very interested in going up to help in run support much or in attacking the multiple bubble screens or quick outs that we see in the game these days.  I need my corner to be a physical man on the flank, especially at that size. I just don’t see that consistently as you could accuse him of too many “business decisions” as a corner that may count Deion Sanders as an inspiration.  Sanders is one of the all-time greats, but there were times where “team defense” never seemed like a great priority, and Peters is the same way. He also looks like he is an outside guy who doesn’t have the quicks underneath to stay with the smaller slot receivers, so if you want a bigger corner who will plays outside and make breaks on the ball, I think he will be be fine and likely a 1st rounder.  But, if you want corners who think they are bigger than they really are and love to dive-bomb a play underneath, Peters is not your guy.",
-		"sturmlink": "http://cowboysblog.dallasnews.com/2015/03/2015-nfl-draft-profile-marcus-peters-cb-washington.html/"
+		"sturmlink": "http://cowboysblog.dallasnews.com/2015/03/2015-nfl-draft-profile-marcus-peters-cb-washington.html/",
+		"playermug": "images/peters.jpg"
 	},
 	{
 		"playerid": "kevinjohnson",
@@ -1287,7 +1280,8 @@ var playerPool = [
 		"playerweight": 188,
 		"machota": "X",
 		"sturmsays": "This player is high on my board as a guy who I feel great about.  He has the mentality and the makeup that I look for in a corner, and unlike Peters from Washington, he is far more ready to attack the line of scrimmage and is a team defender which make his abilities far more useful to me.  I am confident that this player has the skill-set that is required to deal with the challenges that are ahead and he has all the attributes you are looking for in a 1st round corner.  He also looks able to contribute on special teams and provide depth.  If you are Dallas and in need for a scheme fit with tremendous upside and looks to be a real value, I believe this player would be pretty high on the list if he falls to #27.  Easily, my 2nd favorite corner to this point of the study.",
-		"sturmlink": "http://cowboysblog.dallasnews.com/2015/03/2015-nfl-draft-profile-kevin-johnson-cb-wake-forest.html/"
+		"sturmlink": "http://cowboysblog.dallasnews.com/2015/03/2015-nfl-draft-profile-kevin-johnson-cb-wake-forest.html/",
+		"playermug": "images/johnsonKevin.jpg"
 	},
 	{
 		"playerid": "jalencollins",
@@ -1300,7 +1294,8 @@ var playerPool = [
 		"playerweight": 203,
 		"machota": "X",
 		"sturmsays": "I thought his change of direction was very sloppy and was basically a target for comebacks and slants in front of him (when he was off and soft or in a zone look) where he could not get out of his back-pedal and hit the gas in enough time to impact the throw at all.  Amari Cooper was all over him in that Alabama game with the same 2 routes over and over.  He also appears to go back and forth on how interested he is in run support and throwing his shoulder into traffic or standing around the pile and letting someone else take the bruise.  It is possible he was dealing with some level of injury that caused this behavior that would come and go, but on tape it doesn’t always pass the test.  And more than anything, you just want to know why he wasn’t a bigger factor in 3 seasons at LSU.",
-		"sturmlink": "http://cowboysblog.dallasnews.com/2015/03/2015-nfl-draft-profile-jalen-collins-cb-lsu.html/"
+		"sturmlink": "http://cowboysblog.dallasnews.com/2015/03/2015-nfl-draft-profile-jalen-collins-cb-lsu.html/",
+		"playermug": "images/collins.jpg"
 	},
 	{
 		"playerid": "jalencollins",
@@ -1312,7 +1307,8 @@ var playerPool = [
 		"playerheight": "6'1\"",
 		"playerweight": 203,
 		"sturmsays": "I thought his change of direction was very sloppy and was basically a target for comebacks and slants in front of him (when he was off and soft or in a zone look) where he could not get out of his back-pedal and hit the gas in enough time to impact the throw at all.  Amari Cooper was all over him in that Alabama game with the same 2 routes over and over.  He also appears to go back and forth on how interested he is in run support and throwing his shoulder into traffic or standing around the pile and letting someone else take the bruise.  It is possible he was dealing with some level of injury that caused this behavior that would come and go, but on tape it doesn’t always pass the test.  And more than anything, you just want to know why he wasn’t a bigger factor in 3 seasons at LSU.",
-		"sturmlink": "http://cowboysblog.dallasnews.com/2015/03/2015-nfl-draft-profile-jalen-collins-cb-lsu.html/"
+		"sturmlink": "http://cowboysblog.dallasnews.com/2015/03/2015-nfl-draft-profile-jalen-collins-cb-lsu.html/",
+		"playermug": "images/collins.jpg"
 	},
 	{
 		"playerid": "byronjones",
@@ -1325,7 +1321,8 @@ var playerPool = [
 		"playerweight": 199,
 		"machota": "X",
 		"sturmsays": "It certainly doesn’t hurt that the NFL is becoming populated with quite a few UConn Huskies on the defensive side of the ball recently to demonstrate the caliber of defensive backs that school is producing.  But, that said, he is his own man and it would be absurd to accuse him of being a “combine creation” as his tape stands up impressively as a combination of both large build and impressive athletic traits.  On top of that he has very nice tape to back him up where he can really lock down on his man with aggressive man-cover traits you will want on Sunday.  There are many solid corners in this draft, but you don’t have to go very far down that list to find this guy.",
-		"sturmlink": "http://cowboysblog.dallasnews.com/2015/03/2015-nfl-draft-profile-byron-jones-cb-connecticut.html/"
+		"sturmlink": "http://cowboysblog.dallasnews.com/2015/03/2015-nfl-draft-profile-byron-jones-cb-connecticut.html/",
+		"playermug": "images/jones.jpg"
 	},
 	{
 		"playerid": "byronjones",
@@ -1337,7 +1334,8 @@ var playerPool = [
 		"playerheight": "6'0\"",
 		"playerweight": 199,
 		"sturmsays": "It certainly doesn’t hurt that the NFL is becoming populated with quite a few UConn Huskies on the defensive side of the ball recently to demonstrate the caliber of defensive backs that school is producing.  But, that said, he is his own man and it would be absurd to accuse him of being a “combine creation” as his tape stands up impressively as a combination of both large build and impressive athletic traits.  On top of that he has very nice tape to back him up where he can really lock down on his man with aggressive man-cover traits you will want on Sunday.  There are many solid corners in this draft, but you don’t have to go very far down that list to find this guy.",
-		"sturmlink": "http://cowboysblog.dallasnews.com/2015/03/2015-nfl-draft-profile-byron-jones-cb-connecticut.html/"
+		"sturmlink": "http://cowboysblog.dallasnews.com/2015/03/2015-nfl-draft-profile-byron-jones-cb-connecticut.html/",
+		"playermug": "images/jones.jpg"
 	},
 	{
 		"playerid": "ronalddarby",
@@ -1350,7 +1348,8 @@ var playerPool = [
 		"playerweight": 193,
 		"machota": "X",
 		"sturmsays": "I like this player a lot.  And then, when seeing what the consensus is on him – Day 2, mostly – I really like him for that value.  There aren’t many candidates to play corner on an island without safety help over the top (Marcus Peters), but Florida State was more than happy to allow Darby this freedom, and I thought he generally passed the test so well.  Judging corners is never an exact science because the good ones don’t see a ton of action when they are on.  There were games where it looked like he was being avoided.  The Notre Dame game was one where he got lots of action and there he showed several attributes that translate nicely to Sundays.  It all starts with his speed and if he can stay healthy he can rise up and be one of the very best corners in this draft when he develops.  He just turned 21 years old.  If you want a man corner who can really turn on the jets, I think you should really look hard at Darby.",
-		"sturmlink": "http://cowboysblog.dallasnews.com/2015/03/2015-draft-profile-ronald-darby-cb-florida-state.html/"
+		"sturmlink": "http://cowboysblog.dallasnews.com/2015/03/2015-draft-profile-ronald-darby-cb-florida-state.html/",
+		"playermug": "images/darby.jpg"
 	},
 	{
 		"playerid": "ronalddarby",
@@ -1362,7 +1361,8 @@ var playerPool = [
 		"playerheight": "5'10\"",
 		"playerweight": 193,
 		"sturmsays": "I like this player a lot.  And then, when seeing what the consensus is on him – Day 2, mostly – I really like him for that value.  There aren’t many candidates to play corner on an island without safety help over the top (Marcus Peters), but Florida State was more than happy to allow Darby this freedom, and I thought he generally passed the test so well.  Judging corners is never an exact science because the good ones don’t see a ton of action when they are on.  There were games where it looked like he was being avoided.  The Notre Dame game was one where he got lots of action and there he showed several attributes that translate nicely to Sundays.  It all starts with his speed and if he can stay healthy he can rise up and be one of the very best corners in this draft when he develops.  He just turned 21 years old.  If you want a man corner who can really turn on the jets, I think you should really look hard at Darby.",
-		"sturmlink": "http://cowboysblog.dallasnews.com/2015/03/2015-draft-profile-ronald-darby-cb-florida-state.html/"
+		"sturmlink": "http://cowboysblog.dallasnews.com/2015/03/2015-draft-profile-ronald-darby-cb-florida-state.html/",
+		"playermug": "images/darby.jpg"
 	},
 	{
 		"playerid": "pjwilliams",
@@ -1374,7 +1374,8 @@ var playerPool = [
 		"playerheight": "6'0\"",
 		"playerweight": 194,
 		"sturmsays": "There are countless things to like about Williams, but like I said above, I count it a major red flag when I am not just crazy about the cover skills of a press corner.  He is so good going forward, blitzing, and offering a play-maker’s knack for big plays, I wonder if we are looking at a real impressive safety who has been playing corner in college.  He is a real nice player, but I don’t think he would last long as a press corner on Sundays.  He just doesn’t seem to have the natural instincts to handle a quick threat in space and then find the ball at the moment of truth.  With that in mind, I would not value him as high as most, because if I am taking a corner in the 1st round, it is because I believe he can dominate his man in tight coverage at the next level.",
-		"sturmlink": "http://cowboysblog.dallasnews.com/2015/03/2015-nfl-draft-profile-pj-williams-cb-florida-state.html/"
+		"sturmlink": "http://cowboysblog.dallasnews.com/2015/03/2015-nfl-draft-profile-pj-williams-cb-florida-state.html/",
+		"playermug": "images/williamsPJ.jpg"
 	},
 	{
 		"playerid": "quintenrollins",
@@ -1387,7 +1388,8 @@ var playerPool = [
 		"playerweight": 195,
 		"machota": "X",
 		"sturmsays": "Rollins is a very interesting prospect, there is no doubt about it.  If you were simply asking whether you want him to be signed to a free agent deal, this is a no-brainer. But, if you have to take him with one of your top 2 picks, then you are basically guaranteeing that the negatives are no big deal and that the positives will be the calling cards of a long and fruitful career.  Projecting what a guy who is 23 years old (in July) can be in a few years with hard coaching is very difficult to say without knowing what staff gets him and how much you plan on playing him in 2015.  If you need him for this year, I fear he would be barbecued by NFL offenses who see what he is susceptible to underneath even in the MAC. I like him, but it is with a fair amount of caution.",
-		"sturmlink": "http://cowboysblog.dallasnews.com/2015/03/2015-nfl-draft-profile-quinten-rollins-cb-miami-ohio.html/"
+		"sturmlink": "http://cowboysblog.dallasnews.com/2015/03/2015-nfl-draft-profile-quinten-rollins-cb-miami-ohio.html/",
+		"playermug": "images/rollins.jpg"
 	},
 	{
 		"playerid": "stevennelson",
@@ -1399,7 +1401,8 @@ var playerPool = [
 		"playerheight": "5'10\"",
 		"playerweight": 197,
 		"sturmsays": "Nelson is the type of guy that you want on your team.  He has plenty of Orlando Scandrick qualities about him and if I could fill my secondary with guys who compete like Scandrick, I would be a happy man.  He is that guy.  The question now becomes how much you want to pay for a guy with a great mentality, but has limitations when it comes to size and even quickness.  He is good in those categories, but not great. He will, however, quickly become a leader on his team with his junk yard dog spirit and the  idea that he is here all day to compete with the best you have to throw at him.  It is a strong consideration at the end of round 2, and if you can get him in the 3rd round, you would cut to a camera shot of your war-room celebrating you feeling like you just made your draft.",
-		"sturmlink": "http://cowboysblog.dallasnews.com/2015/03/2015-nfl-draft-profile-steven-nelson-cb-oregon-state.html/"
+		"sturmlink": "http://cowboysblog.dallasnews.com/2015/03/2015-nfl-draft-profile-steven-nelson-cb-oregon-state.html/",
+		"playermug": "images/nelson.jpg"
 	},
 	{
 		"playerid": "ifoekpreolomu",
@@ -1411,7 +1414,8 @@ var playerPool = [
 		"playerheight": "5'9\"",
 		"playerweight": 192,
 		"sturmsays": "Despite my reluctance about a few issues, I really like this player and would be torn about him at a certain point of the 2nd round as being “too talented to ignore”.  Combine the 1st round skill-set with the idea that you can never, ever have too many corners and the idea that the Cowboys corner situation is hardly set in stone, and you arrive at the reasonable conclusion that this is something to consider hard if he falls down to you at #60.  That said, given the tape of him out there – including a very impressive showing against Brandin Cooks in 2013 – there is a chance he doesn’t get close to that pick.  But, you never know since it is more than likely he will not run a 40-time before draft day, given his December ACL injury.  This is a very talented player who possesses the type of mentality you have to have to play corner in the NFL.",
-		"sturmlink": "http://cowboysblog.dallasnews.com/2015/03/2015-nfl-draft-profile-ifo-ekpre-olomu-cb-oregon.html/"
+		"sturmlink": "http://cowboysblog.dallasnews.com/2015/03/2015-nfl-draft-profile-ifo-ekpre-olomu-cb-oregon.html/",
+		"playermug": "images/ekpre-olomu.jpg"
 	},
 	{
 		"playerid": "dorangrant",
@@ -1422,7 +1426,8 @@ var playerPool = [
 		"school": "Ohio State",
 		"playerheight": "5'10\"",
 		"playerweight": 200,
-		"machota": "X"
+		"machota": "X",
+		"playermug": "images/grant.jpg"
 	},
 	{
 		"playerid": "senquezgolson",
@@ -1432,7 +1437,8 @@ var playerPool = [
 		"round": 3,
 		"school": "Mississippi",
 		"playerheight": "5'8\"",
-		"playerweight": 176
+		"playerweight": 176,
+		"playermug": "images/golson.jpg"
 	},
 	{
 		"playerid": "landoncollins",
@@ -1445,7 +1451,8 @@ var playerPool = [
 		"playerweight": 228,
 		"machota": "X",
 		"sturmsays": "In today’s NFL, he makes people nervous who want him to be a cover safety. I think he is better than some are saying, but it is clear that he would be best served the way Arizona used Deone Bucannon last year.  Early down safety, late down linebacker.  He  is very good and the positives outweigh the negatives, but we should play to those strengths so we get the most out of this prospect.  He is a ball hawk and a special teams star, along with a play making safety who can turn games.   But, he is not going to foil Aaron Rodgers over the top very often.",
-		"sturmlink": "http://cowboysblog.dallasnews.com/2015/04/2015-nfl-draft-profile-landon-collins-s-alabama.html/"
+		"sturmlink": "http://cowboysblog.dallasnews.com/2015/04/2015-nfl-draft-profile-landon-collins-s-alabama.html/",
+		"playermug": "images/collinsLandon.jpg"
 	},
 	{
 		"playerid": "gerodholliman",
@@ -1455,7 +1462,8 @@ var playerPool = [
 		"round": 2,
 		"school": "Louisville",
 		"playerheight": "6'1\"",
-		"playerweight": 206
+		"playerweight": 206,
+		"playermug": "images/holliman.jpg"
 	},
 	{
 		"playerid": "gerodholliman",
@@ -1466,7 +1474,8 @@ var playerPool = [
 		"school": "Louisville",
 		"playerheight": "6'1\"",
 		"playerweight": 206,
-		"machota": "X"
+		"machota": "X",
+		"playermug": "images/holliman.jpg"
 	},
 	{
 		"playerid": "derronsmith",
@@ -1477,7 +1486,8 @@ var playerPool = [
 		"school": "Fresno State",
 		"playerheight": "5'10\"",
 		"playerweight": 200,
-		"machota": "X"
+		"machota": "X",
+		"playermug": "images/smithDerron.jpg"
 	},
 	{
 		"playerid": "damariousrandall",
@@ -1490,7 +1500,8 @@ var playerPool = [
 		"playerweight": 196,
 		"machota": "X",
 		"sturmsays": "He does some things well. I love the man skills and the cover ability.  He does other things poorly.  Like so many players in this draft in the 3rd-4th rounds, it is a matter of value and asking how you will use him.  Perhaps, he is a nickel back and used as a box safety or a slot back who can focus on his positives.  Also, at the right price, he could be a fantastic depth guy who focuses on special teams while you work on his techniques.  But, as it stands, if this is a safety who someone thinks is ready to be on the field early on, I am going to have to beg to differ.",
-		"sturmlink": "http://cowboysblog.dallasnews.com/2015/04/2015-nfl-draft-profile-damarious-randall-s-arizona-state.html/"
+		"sturmlink": "http://cowboysblog.dallasnews.com/2015/04/2015-nfl-draft-profile-damarious-randall-s-arizona-state.html/",
+		"playermug": "images/randall.jpg"
 	},
 	{
 		"playerid": "jamessample",
@@ -1500,7 +1511,8 @@ var playerPool = [
 		"round": 3,
 		"school": "Louisville",
 		"playerheight": "6'2\"",
-		"playerweight": 209
+		"playerweight": 209,
+		"playermug": "images/sample.jpg"
 	},
 	{
 		"playerid": "jaquiskitartt",
