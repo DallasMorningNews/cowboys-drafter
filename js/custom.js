@@ -11,7 +11,9 @@ $(document).ready(function() {
 	var thirdRoundMinutes = 5;
 
 	//Fire the initial countdown timer with firstRoundMinutes from above
-	startTimer(firstRoundMinutes);
+	//startTimer(firstRoundMinutes);
+
+	var playersSelected = []; // an array of the playerid's of players picked. This array's values will be checked against to see which players in subsequent rounds should be displayed, so that a player picked in an earlier round is displayed in a later round.
 
 
 	/*
@@ -21,21 +23,27 @@ $(document).ready(function() {
 	*/
 
 	function selectPlayer() {
-		$('.checkMark').click(function() {
+		$('.roundSubmitter').click(function(e) {
 			var round = $(this).parent().data('round'); //grab the round of the player selected
 			var playerSelected = $(this).parent().data('playerid');
 
-			$("#" + round).find('.checkMark').attr('src', 'images/uncheck.svg'); //remove the selected checkmark for all players in this round. This is to accommodate changing selected players
-			$(this).attr('src', 'images/check.svg'); //add the selected checkmark to the player selected
+			//$("#" + round).find('.checkMark').attr('src', 'images/uncheck.svg'); //remove the selected checkmark for all players in this round. This is to accommodate changing selected players
+			//$(this).attr('src', 'images/check.svg'); //add the selected checkmark to the player selected
 			$("#" + round).find('.playerView').removeClass('selectedPlayer'); //remove the selectedPlayer class from all players in this round. This is to accommodate changing selected players
 			$(this).parent().addClass('selectedPlayer'); //add the selected player class to the selected player
-			$("#" + round).children('.roundSubmitter').removeClass('noShow'); //show the make pick button
+			//$("#" + round).children('.roundSubmitter').removeClass('noShow'); //show the make pick button
 			$('#' + round).find('.player').removeClass('picked'); //remove the check mark from the player button of any player already selected
 			$.each($('.player'), function(key, value) {
 				if ($(this).data('playerid') === playerSelected && $(this).data('round') === round) { //find the matching player from the player list and add a check mark to the selected player
 					$(this).addClass('picked');
 				}
 			});
+			e.preventDefault(); //prevent the default behavior so we can scroll it
+			var roundSubmitted = $(this).data('round'); //grabs the round we're making a pick in
+			var playerSelected = $('#' + roundSubmitted).find('.selectedPlayer').data('playerid'); //gets the id of the player selected
+			var nextRound = $(this).attr('href'); //grabs the next round id, so we know where to scroll to
+			makePick(roundSubmitted, playerSelected, nextRound);
+
 		})
 	}
 
@@ -71,6 +79,7 @@ $(document).ready(function() {
 	*/
 
 	function positionSelection(round, position, roundDiv) {
+		console.log(round);
 		var targetRound = parseInt(round); //change the round parameter into an integer for use below ...
 		var players = "";
 		var playerModules = ""
@@ -79,7 +88,9 @@ $(document).ready(function() {
 
 		$.each(playerPool, function(key, value) {
 			if ( playerPool[key].round === targetRound && playerPool[key].position === position ) {
+				
 				players += "<li class='player' data-playerid='" + value.playerid + "' data-round='round" + value.round + "'>" + value.firstname + " " + value.lastname +"</li>";
+
 				playerModules += "<div class='playerView clearFix' data-playerid='" + value.playerid + "' data-round='round" + value.round + "'>";
 				if (value.playermug){ //if there's a value for mug use it
 					playerModules += "<img src='" + value.playermug + "' alt='" + value.firstname + " " + value.lastname + "' />"
@@ -95,13 +106,30 @@ $(document).ready(function() {
 				if (playerPool[key].sturmsays) {
 					playerModules += "<p class='blurb'><strong>STURM SAYS: </strong>" + value.sturmsays + " <a target='_blank' href='" + value.sturmlink + "'>Read More.</a></p>";
 				}
-				playerModules += "<img class='checkMark' src='images/uncheck.svg' alt='unchecked' />"
+				playerModules += "<a href='#round" + (round +1 ) + "' class='roundSubmitter' data-round='round" + round + "'>Make Pick!</a>"
 				playerModules += "</div>";
 			}
 		})
 		roundDiv.children('.players').removeClass('noShow'); //display the players div where the available players will go
 		roundDiv.find('.playerList').html(players); // then append those players
+		
+		//check if a player in the player list has been selected before, and if so, remove him from the list in following rounds
+		roundDiv.find('.player').each(function(k,v) {
+			var playerID = $(this).data('playerid')
+			if ( $.inArray(playerID, playersSelected) >= 0 ) {
+				$(this).remove();
+			}
+		})
+		roundDiv.find('.playerList li:first-of-type').addClass('viewing'); //mark the first player in the list with the "viewing" class
 		roundDiv.find('.playerModule').html(playerModules); //append all the player Modules, though they will be hidden initially.
+		//check if a player has been picked before, and if so, remove that player's playerview from the player modules
+		roundDiv.find('.playerView').each(function(k,v) {
+			var playerID = $(this).data('playerid')
+			if ( $.inArray(playerID, playersSelected) >= 0 ) {
+				$(this).remove();
+			}
+		})
+		roundDiv.find('.playerModule .playerView:first-of-type').addClass('viewable');
 		displayPlayer(); //run the function that controls display a player
 	}
 
@@ -117,6 +145,13 @@ $(document).ready(function() {
 
 	function makePick(round, playerID, nextRound) {
 		console.log(round, playerID, nextRound);
+		
+		playersSelected.push(playerID);
+
+		if (nextRound === "#round4") {
+			nextRound = "#yourPicks";
+		} 
+
 		console.log(pickThree);
 		switch(round){
 			case "round1":
@@ -141,7 +176,6 @@ $(document).ready(function() {
 			$('.selectedPlayer').clone().appendTo('#playersPicked'); // clone the selectedPlayer divs, then add them to the playersPicked div
 			pickThree = true;
 			console.log("test:" + pickThree);
-
 		}
 
 		if ( pickThree === true) {
@@ -182,9 +216,9 @@ $(document).ready(function() {
 		var playerSelected = $('#' + roundSubmitted).find('.selectedPlayer').data('playerid'); //gets the id of the player selected
 		var nextRound = $(this).attr('href'); //grabs the next round id, so we know where to scroll to
 
-		clearInterval(timer); //Dump the old timer object
+		//clearInterval(timer); //Dump the old timer object
 
-		switch(roundSubmitted){ //Get current round so I can reset timer for next round
+		/*switch(roundSubmitted){ //Get current round so I can reset timer for next round
 				case "round1":
 					startTimer(secondRoundMinutes); //Reset timer to 7 minutes for second round
 					break;
@@ -195,7 +229,7 @@ $(document).ready(function() {
 					break; //Do nothing since you are already at last round
 				default:
 					alert("There was an error determining which round you are in.")
-		}
+		}*/
 
 		//pass those variables to the makePick function
 		makePick(roundSubmitted, playerSelected, nextRound);
