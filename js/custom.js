@@ -88,7 +88,7 @@ $(document).ready(function() {
 
 		$.each(playerPool, function(key, value) {
 			if ( playerPool[key].round === targetRound && playerPool[key].position === position ) {
-				
+
 				players += "<li class='player' data-playerid='" + value.playerid + "' data-round='round" + value.round + "'>" + value.firstname + " " + value.lastname +"</li>";
 
 				playerModules += "<div class='playerView clearFix' data-playerid='" + value.playerid + "' data-round='round" + value.round + "'>";
@@ -112,7 +112,7 @@ $(document).ready(function() {
 		})
 		roundDiv.children('.players').removeClass('noShow'); //display the players div where the available players will go
 		roundDiv.find('.playerList').html(players); // then append those players
-		
+
 		//check if a player in the player list has been selected before, and if so, remove him from the list in following rounds
 		roundDiv.find('.player').each(function(k,v) {
 			var playerID = $(this).data('playerid')
@@ -145,12 +145,12 @@ $(document).ready(function() {
 
 	function makePick(round, playerID, nextRound) {
 		console.log(round, playerID, nextRound);
-		
+
 		playersSelected.push(playerID);
 
 		if (nextRound === "#round4") {
 			nextRound = "#yourPicks";
-		} 
+		}
 
 		console.log(pickThree);
 		switch(round){
@@ -324,14 +324,11 @@ $(document).ready(function() {
 				}
 
 				//Call drawcharts function with data and target div
+				console.log("\nPreparing to drawCharts with ("+thisData+", "+thisID+")");
 				drawCharts(thisData, thisID);
 			})
-
-
 		});
-
 	});
-
 });
 
 /*
@@ -339,7 +336,76 @@ $(document).ready(function() {
 FUNCTION TO DRAW CHARTS
 ----------------------------------
 */
+
+//colors
+var red = "#f15b40",
+	orange = "#faa54a",
+	blue = "#4caacd",
+	gold = "#ffcc4e",
+	green = "#8fa955",
+	purple = "#968fa3",
+	brown = "#d37854",
+	brightpurple = "#ae83ba",
+	brightgreen = "a9d37b";
+
+//Margin and sizes
+var margin = {
+		top: 5,
+		right: 0,
+		bottom: 5,
+		left: 0
+	},
+	width = 160, //set width of charts...
+	height = 160;
+
+var radius = width / 2;
+
+var color = d3.scale.ordinal()
+	.range([blue, orange]);
+
 function drawCharts(data, target) {
 	console.log("in drawCharts with " + data + " and " + target);
+
+	//Create myChart instance
+	var myChart = d3.select("#"+target).append("svg") //get the target div and write an svg tag in it
+		.attr("width", width + margin.left + margin.right) //set attributes...
+		.attr("height", height + margin.top + margin.bottom);
+
+	var group = myChart.append("g") //add a group tag to the svg
+		.attr("transform", "translate(" + width / 2 + ", "+height/2+") "); //set the group's attributes
+
+	//Set the radius for inner and outer arc
+	var arc = d3.svg.arc()
+		.innerRadius(40) //
+		.outerRadius(radius)
+
+	//Tell D3 we're gonna do some pie
+	var pie = d3.layout.pie()
+		.value(function (d) {
+			return d;
+		});
+
+	var arcs = group.selectAll(".arc")
+		.data(pie(data)) //Send the data through the pie function first
+		.enter()
+		.append("g")
+		.attr("class", "arc");
+
+	arcs.append("path")
+		.attr("d", arc)
+		.attr("fill", function (d, i) {
+			return color(i);
+		});
+
+	arcs.append("text")
+		.attr("transform", function (d) {
+			return "translate(" + arc.centroid(d) + ")";
+		})
+		.attr("text-anchor", "middle")
+		.attr("class", "label")
+		.text(function (d) {
+			return numberFormatter(d.data);
+		});
 }
+
 
