@@ -184,10 +184,16 @@ $(document).ready(function() {
 			$('.selectedPlayer').clone().appendTo('#playersPicked'); // clone the selectedPlayer divs, then add them to the playersPicked div
 
 			//appending a change pick button to each of the selected players
-			$.each($('#playersPicked .player'), function(key, value) {
+			$.each($('#playersPicked .selectedPlayer'), function(key, value) {
 				var changePick = "<a class='changePick' href='#round" + (key + 1) + "'>Change pick</a>"
 				$(this).append(changePick);
-			})
+			});
+
+			//appending a hidden chart div to each of the selected players
+			$.each($('#playersPicked .selectedPlayer'), function(key, value) {
+				var thisChart = "<div class='draftResults' id='round" + (key + 1) + "results'></div>"
+				$(this).append(thisChart);
+			});
 
 			//adding the functionality of the changePick button, so that the window scrolls back to the target round the user wants to change.
 			$('.changePick').click(function(e) {
@@ -308,15 +314,16 @@ $(document).ready(function() {
 			$(".draftResults").each(function (i) {
 				//Get the specific id, example "#firstRoundResults"
 				var thisID = $(this).attr("id");
+				$("#"+thisID).show();
 
 				switch (thisID) {
-				case "firstRoundResults":
+				case "round1results":
 					var thisData = firstRoundData;
 					break;
-				case "secondRoundResults":
+				case "round2results":
 					var thisData = secondRoundData;
 					break;
-				case "fthirdRoundResults":
+				case "round3results":
 					var thisData = thirdRoundData;
 					break;
 				default:
@@ -355,10 +362,12 @@ var margin = {
 		bottom: 5,
 		left: 0
 	},
-	width = 160, //set width of charts...
-	height = 160;
+	width = 280, //set width of charts...
+	height = 280;
 
 var radius = width / 2;
+
+var numberFormatter = d3.format("0,000");
 
 var color = d3.scale.ordinal()
 	.range([blue, orange]);
@@ -376,7 +385,7 @@ function drawCharts(data, target) {
 
 	//Set the radius for inner and outer arc
 	var arc = d3.svg.arc()
-		.innerRadius(40) //
+		.innerRadius(80) //
 		.outerRadius(radius)
 
 	//Tell D3 we're gonna do some pie
