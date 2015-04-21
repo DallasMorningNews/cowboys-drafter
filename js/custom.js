@@ -1,5 +1,12 @@
 $(document).ready(function () {
 
+
+	setTimeout(function() {
+		$('#storyHead h1').addClass('headlineFade');
+		$('#storyHead h2').addClass('headlineFade');
+		$('#storyHead h3').addClass('headlineFade');
+	}, 250);
+
 	//The variables that will have the names of your picks and will be passed into the database.
 	var firstRoundPick;
 	var secondRoundPick;
@@ -108,7 +115,7 @@ $(document).ready(function () {
 				playerModules += "<p class='playerStat lastStat'><span class='label'>Weight</span> " + value.playerweight + "</p>";
 				playerModules += "</div>";
 				if (playerPool[key].sturmsays) {
-					playerModules += "<p class='blurb'><strong>STURM SAYS: </strong>" + value.sturmsays + " <a target='_blank' href='" + value.sturmlink + "'>Read More.</a></p>";
+					playerModules += "<p class='blurb'><strong>BOB STURM SAYS: </strong>" + value.sturmsays + " <a target='_blank' href='" + value.sturmlink + "'>Read More.</a></p>";
 				}
 				playerModules += "<a href='#round" + (round + 1) + "' class='roundSubmitter' data-round='round" + round + "' data-roundInt='" + round + "'>Draft " + value.firstname + " " + value.lastname + "</a>"
 				playerModules += "</div>";
@@ -214,6 +221,8 @@ $(document).ready(function () {
 						draftOutput += "<img src='" + v.playermug + "' alt='" + v.firstname + " " + v.lastname + "' .>";
 						draftOutput += "<h2>" + v.firstname + " " + v.lastname + "</h2>";
 						draftOutput += "<p>" + v.position + ", " + v.school + "</p>";
+						draftOutput += "<p>Height: " + v.playerheight + "</p>";
+						draftOutput += "<p>Weight: " + v.playerweight + "</p>";
 						draftOutput += "<div class='draftResults' id='round" + (k + 1) + "results'></div>";
 						draftOutput += "</div>";
 						return false;

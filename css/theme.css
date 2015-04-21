@@ -137,7 +137,6 @@ h6 {
 }
 #contentHeader img {
 	width: 100%;
-	margin-bottom: .3rem;
 }
 #contentHeader .cutline {
 	font-size: 1.3rem;
@@ -177,20 +176,34 @@ p:last-child {
 	margin: 0 auto 2.4rem auto;
 	text-align: center;
 	color: #3d3d3d;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	padding: 20% 5rem 0;
+	background-color: rgba(61,61,61,.6);
 }
+
 #storyHead h1 {
+	color: white;
 	font-size: 6.4rem;
 	font-weight: normal;
 	letter-spacing: -.2rem;
 	line-height: 7.6rem;
 	margin-bottom: 1.8rem;
+	opacity: 0;
+	transition: opacity 2s ease-out;
 }
 #storyHead h2 {
+	color: white;
 	font-size: 3.2rem;
 	font-weight: normal;
 	line-height: 4.2rem;
+	opacity: 0;
+	transition: opacity 2s ease-out;
 }
 #storyHead h3 {
+	color: white;
 	border-bottom: 1px solid #CECDC6;
 	display: inline-block;
 	font-family: 'Open Sans', Arial, sans-serif;
@@ -200,7 +213,31 @@ p:last-child {
 	margin-bottom: 1.8rem;
 	padding-bottom: .6rem;
 	text-transform: uppercase;
+	opacity: 0;
+	transition: opacity 2s ease-out;
 }
+
+.headlineFade {
+	opacity: 1 !important;
+}
+
+@media (max-width: 725px) {
+	#wrapper {
+		padding: 0 0 5rem;
+	}
+	#storyHead {
+		position: relative;
+		margin: 3.6rem auto 1.2rem;
+		padding: 0 0;
+		background-color: white;
+		width: 90%;
+	}
+	#storyHead h1, #storyHead h2, #storyHead h3 {
+		color: #3d3d3d;
+		opacity: 1;
+	}
+}
+
 .bylineBlock {
 	text-align: center;
 }
@@ -223,6 +260,7 @@ p:last-child {
 .intro {
 	font-size: 2.4rem;
 	line-height: 4rem;
+	max-width: 900px;
 }
 .dropcap {
 	color: #3d3d3d;
@@ -241,7 +279,7 @@ p:last-child {
 	margin: 4.8rem 0 2.4rem 0;
 }
 
-@media (max-width: 860px) {
+@media (max-width: 1000px) {
 	#storyHead h1 {
 	font-size: 4rem;
 	line-height: 5rem;
@@ -278,6 +316,10 @@ p:last-child {
 	font-size: 3.2rem;
 	line-height: 3.6rem;
 	letter-spacing: 0;
+	}
+	#storyHead h2 {
+		font-size: 2rem;
+		line-height: 2.4rem;
 	}
 	.intro {
 	font-size: 1.6rem;
@@ -920,6 +962,7 @@ p:last-child {
 
 .playerDrafted p {
 	font-size: 1.4rem;
+	margin: 0 0 .6rem 0;
 	text-transform: uppercase;
 	color: white;
 	font-family: 'Roboto Slab', Arial, sans-serif;
