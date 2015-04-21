@@ -217,13 +217,15 @@ $(document).ready(function () {
 				$.each(playerPool, function (k, v) {
 					if (v.playerid === currentPlayer) {
 						draftOutput += "<div class='playerDrafted' id='drafted" + roundPicked + "'>";
-						draftOutput += "<h4>Round " + roundPicked + "</h4>";
-						draftOutput += "<img src='" + v.playermug + "' alt='" + v.firstname + " " + v.lastname + "' .>";
-						draftOutput += "<h2>" + v.firstname + " " + v.lastname + "</h2>";
-						draftOutput += "<p>" + v.position + ", " + v.school + "</p>";
-						draftOutput += "<p>Height: " + v.playerheight + "</p>";
-						draftOutput += "<p>Weight: " + v.playerweight + "</p>";
-						draftOutput += "<div class='draftResults' id='round" + (k + 1) + "results'></div>";
+						draftOutput += "	<h4>Round " + roundPicked + "</h4>";
+						draftOutput += "	<img src='" + v.playermug + "' alt='" + v.firstname + " " + v.lastname + "' .>";
+						draftOutput += "	<h2>" + v.firstname + " " + v.lastname + "</h2>";
+						draftOutput += "	<p>" + v.position + ", " + v.school + "</p>";
+						draftOutput += "	<p>Height: " + v.playerheight + "</p>";
+						draftOutput += "	<p>Weight: " + v.playerweight + "</p>";
+						draftOutput += "	<div class='chartHead'>Draft comparison</div>";
+						draftOutput += "	<div class='chartChatter'>The number of people who made the same sleection:</div>";
+						draftOutput += "	<div class='draftResults' id='round" + (k + 1) + "results'></div>";
 						draftOutput += "</div>";
 						return false;
 					}
@@ -485,7 +487,7 @@ var radius = width / 2;
 /* testing out dynamic sizing */
 function dynamicSizing() {
 	var $windowWidth = $(".playerDrafted").width();
-	width = $windowWidth * .8;
+	width = $windowWidth * .95;
 	height = width;
 	radius = width / 2;
 }
@@ -512,7 +514,7 @@ function drawCharts(data, target) {
 
 	//Set the radius for inner and outer arc
 	var arc = d3.svg.arc()
-		.innerRadius(80) //
+		.innerRadius(85) //
 		.outerRadius(radius)
 
 	//Tell D3 we're gonna do some pie
@@ -543,4 +545,6 @@ function drawCharts(data, target) {
 			return numberFormatter(d.data);
 		});
 	$("#finalizeDraft").hide();
+	$(".chartHead").show();
+	$(".chartChatter").show();
 }
