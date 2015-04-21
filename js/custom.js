@@ -226,7 +226,7 @@ $(document).ready(function () {
 						draftOutput += "	<p><strong>" + v.position + ", " + v.school + "</strong></p>";
 						draftOutput += "	<p>Height: " + v.playerheight + " Weight: " + v.playerweight + "</p>";
 						draftOutput += "	<div class='chartHead'>Draft comparison</div>";
-						draftOutput += "	<div class='chartChatter'>The number of people who made the same selection this round:</div>";
+						draftOutput += "	<div class='chartChatter'>The number in blue indicates the number of people who made the same selection this round:</div>";
 						draftOutput += "	<div class='draftResults' id='round" + (k + 1) + "results'></div>";
 						draftOutput += "</div>";
 						return false;
