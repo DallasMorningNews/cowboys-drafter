@@ -181,7 +181,7 @@ p:last-child {
 	left: 0;
 	height: 100%;
 	padding: 20% 5rem 0;
-	background-color: rgba(61,61,61,.6);
+	background-color: rgba(31,31,31,.6);
 }
 
 #storyHead h1 {
@@ -261,6 +261,22 @@ p:last-child {
 	font-size: 2.4rem;
 	line-height: 4rem;
 	max-width: 900px;
+	padding: 0 0 2.4rem 0;
+	margin: 0 auto 9.4rem;
+	position: relative;
+}
+.intro:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  bottom: -3.6rem;
+  left: 50%;
+  margin: 0 0 0 -3rem;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-top: 30px solid #002244;
 }
 .dropcap {
 	color: #3d3d3d;
@@ -456,6 +472,7 @@ p:last-child {
 	line-height: 2rem;
 	font-weight: bold;
 	margin-bottom: .5rem;
+	font-family: 'Open Sans', Arial, sans-serif;
 }
 .more a p {
 	font-size: 1.3rem;
@@ -919,32 +936,47 @@ p:last-child {
 	margin: 0 auto;
 }
 
-#yourPicks h4 {
+#yourPicks h3 {
 	text-align: center;
 }
 
 #playersPicked {
 	width: 100%;
-	max-width: 88rem;
+	max-width: 100rem;
 	margin: 0 auto;
 }
 
 .playerDrafted {
-	width: 280px;
+	width: 33.33%;
 	float: left;
-	margin: 0 2rem 0 0;
-	padding: 1rem;
-	border-radius: .5rem;
-	background: linear-gradient(to bottom, rgba(31,31,31,0) 0%,rgba(31,31,31,.8) 1%,rgba(31,31,31,.8) 15%,rgba(31,31,31,.8) 85%,rgba(31,31,31,.8) 100%), url('../images/pattern.png') repeat 0 0 / 3px 3px, rgb(31,31,31);
+	padding: 0 2rem;
+	text-align: center;
+	border-right: 1px solid #3d3d3d;
+}
+
+@media (max-width: 600px) {
+	.playerDrafted {
+		width: 100%;
+		float: none;
+		border-right: none;
+		margin: 0 0 2.4rem 0;
+		padding: 0 2rem 2.4rem;
+		border-bottom: 1px solid #3d3d3d;
+	}
+	.playerDrafted:last-of-type {
+		border-bottom: none;
+		margin: 0 0;
+		padding: 0 2rem 0 0;
+	}
 }
 
 .chartHead {
 	font-size: 2rem;
-	line-height: 2.2rem;
-	color: white;
+	line-height: 2.4rem;
+	color: #3d3d3d;
 	text-align: center;
 	width: 100%;
-	margin-top: 10px;
+	margin-top: 2rem;
 	font-family: "Roboto Slab",Arial,sans-serif;
 	display: none;
 }
@@ -954,38 +986,30 @@ p:last-child {
 	font-size: 1.2rem;
 	line-height: 1.4em;
 	text-align: center;
-	color: white;
+	color: #3d3d3d;
 	font-family: 'Roboto Slab', Arial, sans-serif;
 	display: none;
 }
 
 .playerDrafted:last-of-type {
-	margin: 0 0;
-}
-.playerDrafted img {
-	width: 100px;
-	margin: 0 1rem 20px 0;
-	float: left;
+	border-right: none;
 }
 
 .playerDrafted h4 {
 	font-size: 1.8rem;
 	text-decoration: underline;
 	text-transform: uppercase;
-	color: white;
 }
 
 .playerDrafted h2 {
 	font-size: 2.4rem;
 	line-height: 3rem;
-	color: white;
 }
 
 .playerDrafted p {
 	font-size: 1.4rem;
 	margin: 0 0 .6rem 0;
 	text-transform: uppercase;
-	color: white;
 	font-family: 'Roboto Slab', Arial, sans-serif;
 }
 
@@ -1020,4 +1044,5 @@ svg {
 svg .label{
 	font-size: 1.5em;
 	font-family: 'Roboto Slab', Arial, sans-serif;
+	fill: white;
 }

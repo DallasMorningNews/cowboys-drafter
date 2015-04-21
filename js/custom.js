@@ -87,7 +87,7 @@ $(document).ready(function () {
 	*/
 
 	function positionSelection(round, position, roundDiv) {
-		console.log(round);
+		console.log(round, position, roundDiv);
 		var targetRound = parseInt(round); //change the round parameter into an integer for use below ...
 		var players = "";
 		var playerModules = ""
@@ -144,8 +144,7 @@ $(document).ready(function () {
 		displayPlayer(); //run the function that controls display a player
 	}
 
-
-
+	positionSelection(1, "qb", $("#round1"))
 
 	/*
 	----------------------------------
@@ -157,13 +156,18 @@ $(document).ready(function () {
 	function makePick(round, playerID, nextRound, roundInt) {
 		console.log(round, playerID, nextRound);
 
+
 		// check if we already have three players selected. If someone changes their pick, remove the old player from that array, and insert the new. If we don't have a three players, just push the playerid of the player selected
-		if (playersDrafted.length >= 3) {
-			playersDrafted.splice((roundInt - 1), 1, playerID);
-			console.log(playersDrafted);
-		} else {
-			playersDrafted.push(playerID);
-		}
+		playersDrafted.splice((roundInt - 1), 1, playerID);
+
+
+		// check if we already have three players selected. If someone changes their pick, remove the old player from that array, and insert the new. If we don't have a three players, just push the playerid of the player selected
+		// if (playersDrafted.length >= 3) {
+		// 	playersDrafted.splice((roundInt - 1), 1, playerID);
+		// 	console.log(playersDrafted);
+		// } else {
+		// 	playersDrafted.push(playerID);
+		// }
 
 		// if we're clicking the last round, make sure we go to the #yourpicks div
 		if (nextRound === "#round4") {
@@ -218,13 +222,11 @@ $(document).ready(function () {
 					if (v.playerid === currentPlayer) {
 						draftOutput += "<div class='playerDrafted' id='drafted" + roundPicked + "'>";
 						draftOutput += "	<h4>Round " + roundPicked + "</h4>";
-						draftOutput += "	<img src='" + v.playermug + "' alt='" + v.firstname + " " + v.lastname + "' .>";
 						draftOutput += "	<h2>" + v.firstname + " " + v.lastname + "</h2>";
-						draftOutput += "	<p>" + v.position + ", " + v.school + "</p>";
-						draftOutput += "	<p>Height: " + v.playerheight + "</p>";
-						draftOutput += "	<p>Weight: " + v.playerweight + "</p>";
+						draftOutput += "	<p><strong>" + v.position + ", " + v.school + "</strong></p>";
+						draftOutput += "	<p>Height: " + v.playerheight + " Weight: " + v.playerweight + "</p>";
 						draftOutput += "	<div class='chartHead'>Draft comparison</div>";
-						draftOutput += "	<div class='chartChatter'>The number of people who made the same sleection:</div>";
+						draftOutput += "	<div class='chartChatter'>The number of people who made the same selection this round:</div>";
 						draftOutput += "	<div class='draftResults' id='round" + (k + 1) + "results'></div>";
 						draftOutput += "</div>";
 						return false;
@@ -466,8 +468,9 @@ var red = "#f15b40",
 	brown = "#d37854",
 	brightpurple = "#ae83ba",
 	brightgreen = "a9d37b";
-white = "#ffffff";
-darkgray = "#CECDC6"
+	white = "#ffffff";
+	darkgray = "#CECDC6";
+	cowboyBlue = "#002244";
 
 //Margin and sizes
 var margin = {
@@ -488,6 +491,9 @@ var radius = width / 2;
 function dynamicSizing() {
 	var $windowWidth = $(".playerDrafted").width();
 	width = $windowWidth * .95;
+	if (width > 300) {
+		width = 280;
+	}
 	height = width;
 	radius = width / 2;
 }
@@ -497,7 +503,7 @@ function dynamicSizing() {
 var numberFormatter = d3.format("0,000");
 
 var color = d3.scale.ordinal()
-	.range([white, darkgray]);
+	.range([cowboyBlue, darkgray]);
 
 function drawCharts(data, target) {
 	console.log("in drawCharts with " + data + " and " + target);
@@ -514,7 +520,7 @@ function drawCharts(data, target) {
 
 	//Set the radius for inner and outer arc
 	var arc = d3.svg.arc()
-		.innerRadius(85) //
+		.innerRadius(radius/2) //
 		.outerRadius(radius)
 
 	//Tell D3 we're gonna do some pie
