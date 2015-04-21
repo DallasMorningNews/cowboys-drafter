@@ -938,12 +938,33 @@ p:last-child {
 	background: linear-gradient(to bottom, rgba(31,31,31,0) 0%,rgba(31,31,31,.8) 1%,rgba(31,31,31,.8) 15%,rgba(31,31,31,.8) 85%,rgba(31,31,31,.8) 100%), url('../images/pattern.png') repeat 0 0 / 3px 3px, rgb(31,31,31);
 }
 
+.chartHead {
+	font-size: 2rem;
+	line-height: 2.2rem;
+	color: white;
+	text-align: center;
+	width: 100%;
+	margin-top: 10px;
+	font-family: "Roboto Slab",Arial,sans-serif;
+	display: none;
+}
+.chartChatter{
+	margin-top: 5px;
+	margin-bottom: 10px;
+	font-size: 1.2rem;
+	line-height: 1.4em;
+	text-align: center;
+	color: white;
+	font-family: 'Roboto Slab', Arial, sans-serif;
+	display: none;
+}
+
 .playerDrafted:last-of-type {
 	margin: 0 0;
 }
 .playerDrafted img {
 	width: 100px;
-	margin: 0 1rem 0 0;
+	margin: 0 1rem 20px 0;
 	float: left;
 }
 
@@ -993,5 +1014,10 @@ p:last-child {
 }
 
 svg {
-	margin-top: 1rem;
+	display: block;
+	margin: auto;
+}
+svg .label{
+	font-size: 1.5em;
+	font-family: 'Roboto Slab', Arial, sans-serif;
 }
