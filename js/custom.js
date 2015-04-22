@@ -436,17 +436,39 @@ $(document).ready(function () {
 
 				drawCharts(thisData, thisID);
 
-
-
 			});
+
 			firstRoundName = $("#drafted1 h2").text();
 			secondRoundName = $("#drafted2 h2").text();
 			thirdRoundName = $("#drafted3 h2").text();
 
+			//CHANGE THIS //CHANGE THIS //CHANGE THIS //CHANGE THIS //CHANGE THIS //CHANGE THIS //CHANGE THIS //CHANGE THIS
+			var uriLink="http%3A%2F%2Fres.dallasnews.com%2Ftest%2Flayne%2FcandidateBFF%2Fcruz%2Findex.html";  //CHANGE THIS
+			//CHANGE THIS //CHANGE THIS //CHANGE THIS //CHANGE THIS //CHANGE THIS //CHANGE THIS //CHANGE THIS //CHANGE THIS
+
+			var hashtags = "Cowboys";
+
 			var leadText = "My picks for the Dallas Cowboys’ draft: " + firstRoundName + ", " + secondRoundName + ", " + thirdRoundName + ". Who would you pick?";
 
-			shareInit(storyURL, storyTitle, leadText, storyIMG, 'share-bar1');
-			shareInit(storyURL, storyTitle, leadText, storyIMG, 'share-bar2');
+			$("#facebookButton").click(function () {
+				//Facebook share
+				console.log("Share to Facebook");
+				FB.ui({
+					method: 'feed',
+					name: storyTitle,
+					link: storyURL,
+					caption: '',
+					picture: storyIMG,
+					description: leadText
+				});
+			});
+
+			$("#twitterButton").click(function () {
+				console.log("Share to Twitter:\nstoryURL: " + storyURL + "\nstoryTitle: " + storyTitle + "\nleadText: " + leadText + "\nstoryIMG: " + storyIMG);
+				//Twitter share quizShare
+				window.open("https://www.twitter.com/intent/tweet?&hashtags=" + hashtags + "&text=" + leadText + "&via=dallasnews&url=" + uriLink + "&image=" + storyIMG, "top=200, left=200,width=550,height=420");
+			});
+
 
 		});
 	});
@@ -553,4 +575,5 @@ function drawCharts(data, target) {
 	$("#finalizeDraft").hide();
 	$(".chartHead").show();
 	$(".chartChatter").show();
+	$(".shareBar").show();
 }
