@@ -130,6 +130,10 @@ h6 {
 	line-height: 2.4rem;
 }
 
+footer p {
+	max-width: none;
+}
+
 /* --------- CONTENT HEADER -------- */
 
 #contentHeader {
@@ -191,16 +195,12 @@ p:last-child {
 	letter-spacing: -.2rem;
 	line-height: 7.6rem;
 	margin-bottom: 1.8rem;
-	opacity: 0;
-	transition: opacity 2s ease-out;
 }
 #storyHead h2 {
 	color: white;
 	font-size: 3.2rem;
 	font-weight: normal;
 	line-height: 4.2rem;
-	opacity: 0;
-	transition: opacity 2s ease-out;
 }
 #storyHead h3 {
 	color: white;
@@ -213,13 +213,8 @@ p:last-child {
 	margin-bottom: 1.8rem;
 	padding-bottom: .6rem;
 	text-transform: uppercase;
-	opacity: 0;
-	transition: opacity 2s ease-out;
 }
 
-.headlineFade {
-	opacity: 1 !important;
-}
 
 @media (max-width: 725px) {
 	#wrapper {
@@ -630,6 +625,10 @@ p:last-child {
 	background-color: #002244;
 }
 
+.roundSubmitter:visited {
+	color: #002244;
+}
+
 .noShow {
 	display: none;
 }
@@ -660,6 +659,11 @@ p:last-child {
 .playerHeader, .instructions {
 	text-align: left;
 	max-width: none;
+}
+
+.playerHeader {
+	font-size: 2rem;
+	line-height: 2.4rem;
 }
 
 .playerList {

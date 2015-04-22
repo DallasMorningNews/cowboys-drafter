@@ -1,12 +1,6 @@
 $(document).ready(function () {
 
 
-	setTimeout(function() {
-		$('#storyHead h1').addClass('headlineFade');
-		$('#storyHead h2').addClass('headlineFade');
-		$('#storyHead h3').addClass('headlineFade');
-	}, 250);
-
 	//The variables that will have the names of your picks and will be passed into the database.
 	var firstRoundPick;
 	var secondRoundPick;
