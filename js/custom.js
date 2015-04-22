@@ -10,9 +10,6 @@ $(document).ready(function () {
 	var data2 = [];
 	var data3 = [];
 
-	//Fire the initial countdown timer with firstRoundMinutes from above
-	//startTimer(firstRoundMinutes);
-
 	var playersDrafted = []; // an array of the playerid's of players picked. This array's values will be checked against to see which players in subsequent rounds should be displayed, so that a player picked in an earlier round is displayed in a later round.
 
 
@@ -27,11 +24,8 @@ $(document).ready(function () {
 			var round = $(this).parent().data('round'); //grab the round of the player selected
 			var playerSelected = $(this).parent().data('playerid');
 
-			//$("#" + round).find('.checkMark').attr('src', 'images/uncheck.svg'); //remove the selected checkmark for all players in this round. This is to accommodate changing selected players
-			//$(this).attr('src', 'images/check.svg'); //add the selected checkmark to the player selected
 			$("#" + round).find('.playerView').removeClass('selectedPlayer'); //remove the selectedPlayer class from all players in this round. This is to accommodate changing selected players
 			$(this).parent().addClass('selectedPlayer'); //add the selected player class to the selected player
-			//$("#" + round).children('.roundSubmitter').removeClass('noShow'); //show the make pick button
 			$('#' + round).find('.player').removeClass('picked'); //remove the check mark from the player button of any player already selected
 			$.each($('.player'), function (key, value) {
 				if ($(this).data('playerid') === playerSelected && $(this).data('round') === round) { //find the matching player from the player list and add a check mark to the selected player
@@ -43,8 +37,10 @@ $(document).ready(function () {
 			var playerSelected = $('#' + roundSubmitted).find('.selectedPlayer').data('playerid'); //gets the id of the player selected
 			var nextRound = $(this).attr('href'); //grabs the next round id, so we know where to scroll to
 			var roundInt = $(this).data('roundint');
-			console.log(roundInt);
 			makePick(roundSubmitted, playerSelected, nextRound, roundInt);
+			//positionSelection(roundInt, "qb", $(nextRound));
+			//$(nextRound).find("li:first-of-type").addClass("activePosition");
+			$(nextRound).find(".positions li:first-of-type").trigger("click");
 
 		})
 	}
@@ -81,7 +77,7 @@ $(document).ready(function () {
 	*/
 
 	function positionSelection(round, position, roundDiv) {
-		console.log(round, position, roundDiv);
+		//console.log(round, position, roundDiv);
 		var targetRound = parseInt(round); //change the round parameter into an integer for use below ...
 		var players = "";
 		var playerModules = ""
@@ -102,6 +98,9 @@ $(document).ready(function () {
 				playerModules += "<header class='playerHead'>";
 				playerModules += "<h1 class='playerPos'>" + position + "</h1>";
 				playerModules += "<h3 class='playerName'>" + value.firstname + " <span class='lastName'>" + value.lastname + "</span></h3>";
+				if (value.machota === "X") {
+					playerModules += "<p class='machotaPick'>Machota's pick</p>";
+				}
 				playerModules += "</header>"
 				playerModules += "<div class='stats clearFix'>"
 				playerModules += "<p class='playerStat'><span class='label'>School</span> " + value.school + "</p>";
@@ -148,27 +147,18 @@ $(document).ready(function () {
 	var pickThree = false;
 
 	function makePick(round, playerID, nextRound, roundInt) {
-		console.log(round, playerID, nextRound);
+		//console.log(round, playerID, nextRound);
 
 
 		// check if we already have three players selected. If someone changes their pick, remove the old player from that array, and insert the new. If we don't have a three players, just push the playerid of the player selected
 		playersDrafted.splice((roundInt - 1), 1, playerID);
-
-
-		// check if we already have three players selected. If someone changes their pick, remove the old player from that array, and insert the new. If we don't have a three players, just push the playerid of the player selected
-		// if (playersDrafted.length >= 3) {
-		// 	playersDrafted.splice((roundInt - 1), 1, playerID);
-		// 	console.log(playersDrafted);
-		// } else {
-		// 	playersDrafted.push(playerID);
-		// }
 
 		// if we're clicking the last round, make sure we go to the #yourpicks div
 		if (nextRound === "#round4") {
 			nextRound = "#yourPicks";
 		}
 
-		console.log(pickThree);
+		//console.log(pickThree);
 		//setting variables to the players picked for each round
 		switch (round) {
 		case "round1":
@@ -189,28 +179,19 @@ $(document).ready(function () {
 
 		//if this is the last round, we're going to populate a final div with the user's picks with the selectedPlayer divs
 		if (round === "round3") {
-			//$('#playersPicked').html(''); //clear that div in case they're changing a pick
-			//$('.selectedPlayer').clone().appendTo('#playersPicked'); // clone the selectedPlayer divs, then add them to the playersPicked div
 			pickThree = true;
-			console.log("test:" + pickThree);
+			//console.log("test:" + pickThree);
 		}
 
 		if (pickThree === true) {
-			console.log('three');
-			//$('#playersPicked').html(''); //clear that div in case they're changing a pick
-			//$('.selectedPlayer').clone().appendTo('#playersPicked'); // clone the selectedPlayer divs, then add them to the playersPicked div
-
-			/*for (i = 0; i < playersSelected.length; i++) {
-				console.log("Times run: " + (i + 1));
-
-			}*/
-
+			//console.log('three');
+			
 			//building the divs of the players picked to populate the #yourpicks div
 			var draftOutput = "";
 
 			for (i = 0; i < playersDrafted.length; i++) {
 				var currentPlayer = playersDrafted[i];
-				console.log(currentPlayer);
+				//console.log(currentPlayer);
 				var roundPicked = i + 1;
 				$.each(playerPool, function (k, v) {
 					if (v.playerid === currentPlayer) {
@@ -230,25 +211,6 @@ $(document).ready(function () {
 			}
 
 			$('#playersPicked').html(draftOutput);
-
-			//appending a change pick button to each of the selected players
-			//$.each($('#playersPicked .selectedPlayer'), function(key, value) {
-			//	var changePick = "<a class='changePick' href='#round" + (key + 1) + "'>Change pick</a>"
-			//	$(this).append(changePick);
-			//});
-
-			//appending a hidden chart div to each of the selected players
-			//$.each($('#playersPicked .selectedPlayer'), function(key, value) {
-			//	var thisChart = "<div class='draftResults' id='round" + (key + 1) + "results'></div>"
-			//	$(this).append(thisChart);
-			//});
-
-			//adding the functionality of the changePick button, so that the window scrolls back to the target round the user wants to change.
-			//$('.changePick').click(function(e) {
-			//	e.preventDefault();
-			//	var changeRound = $(this).attr('href');
-			//	$('html,body').animate({scrollTop: $(changeRound).offset().top}, 500);
-			//})
 
 			$('#yourPicks .player').removeClass('selectedPlayer'); // remove any selectedPlayer styling from those picks
 			$('html,body').animate({
@@ -274,21 +236,6 @@ $(document).ready(function () {
 		var playerSelected = $('#' + roundSubmitted).find('.selectedPlayer').data('playerid'); //gets the id of the player selected
 		var nextRound = $(this).attr('href'); //grabs the next round id, so we know where to scroll to
 
-		//clearInterval(timer); //Dump the old timer object
-
-		/*switch(roundSubmitted){ //Get current round so I can reset timer for next round
-				case "round1":
-					startTimer(secondRoundMinutes); //Reset timer to 7 minutes for second round
-					break;
-				case "round2":
-					startTimer(thirdRoundMinutes); //Reset timer to 5 minutes for third round
-					break;
-				case "round3":
-					break; //Do nothing since you are already at last round
-				default:
-					alert("There was an error determining which round you are in.")
-		}*/
-
 		//pass those variables to the makePick function
 		makePick(roundSubmitted, playerSelected, nextRound);
 	})
@@ -300,12 +247,12 @@ $(document).ready(function () {
 	----------------------------------
 	*/
 
-	$('li').click(function () {
+	$('.positions li').click(function () {
 
 		var roundClicked = $(this).data('round'); // ... grab the round that position belongs to
 		var positionClicked = $(this).data('position'); //.. grab the position that was clicked
 		var roundDiv = $('#round' + roundClicked); //.. grab the round div that that position was clicked in
-		$(roundDiv).find('li').removeClass('activePosition'); //removing the styling of a selected position
+		$(roundDiv).find('.positions li').removeClass('activePosition'); //removing the styling of a selected position
 		$(this).addClass('activePosition'); //adding the selected position styling to the position clicked
 
 		var p; //setting an empty variable that will hold the proper name of the position clicked
@@ -336,7 +283,7 @@ $(document).ready(function () {
 			p = "defensive backs";
 			break;
 		default:
-			console.log("There was a problem with the position picked.");
+			//console.log("There was a problem with the position picked.");
 		}
 
 		$(roundDiv).find('.position').html(p); //assigning the proper position name to the positions span
@@ -355,7 +302,7 @@ $(document).ready(function () {
 
 	//#finalizeDraft is the button you click to post the data
 	$("#finalizeDraft").click(function () {
-		console.log("Submitting draft choices: " + firstRoundPick + ", " + secondRoundPick + ", " + thirdRoundPick);
+		//console.log("Submitting draft choices: " + firstRoundPick + ", " + secondRoundPick + ", " + thirdRoundPick);
 
 		//Post the stuff to the PHP script
 		$.post("http://www.jlsmith.net/work/cowboysdrafter/update.php", {
@@ -368,7 +315,7 @@ $(document).ready(function () {
 		}, function (data) {
 
 			//"data" is what PHP returns to the page
-			console.log("Data returned: " + data);
+			//.log("Data returned: " + data);
 			var returnedDataArray = data.split('|');
 
 			//First number is number who picked just like you, second number is total
@@ -376,9 +323,9 @@ $(document).ready(function () {
 			data2 = [parseInt(returnedDataArray[2]), parseInt(returnedDataArray[3])];
 			data3 = [parseInt(returnedDataArray[4]), parseInt(returnedDataArray[5])];
 
-			console.log("First round: " + data1);
-			console.log("Second round: " + data2);
-			console.log("Third round: " + data3);
+			//console.log("First round: " + data1);
+			//console.log("Second round: " + data2);
+			//console.log("Third round: " + data3);
 
 			//For each div with class .draftResults (These are the divs where the results with donuts will be displayed)
 			$(".playerDrafted").each(function (i) {
@@ -401,15 +348,15 @@ $(document).ready(function () {
 				}
 
 				//Call drawcharts function with data and target div
-				console.log("\nPreparing to drawCharts with (" + thisData + ", " + thisID + ")");
+				//console.log("\nPreparing to drawCharts with (" + thisData + ", " + thisID + ")");
 
 				dynamicSizing();
 				$(window).resize(function () {
 					setTimeout(function () {
-						console.log("resizing");
+						//console.log("resizing");
 						dynamicSizing();
 						for (var i = 1; i <= 3; i++) {
-							console.log(i);
+							//console.log(i);
 							switch (i) {
 							case 1:
 								drawCharts(data1, "drafted1");
@@ -437,16 +384,14 @@ $(document).ready(function () {
 			thirdRoundName = $("#drafted3 h2").text();
 
 			//CHANGE THIS //CHANGE THIS //CHANGE THIS //CHANGE THIS //CHANGE THIS //CHANGE THIS //CHANGE THIS //CHANGE THIS
-			var uriLink="http%3A%2F%2Fres.dallasnews.com%2Ftest%2Flayne%2FcandidateBFF%2Fcruz%2Findex.html";  //CHANGE THIS
+			var uriLink="http%3A%2F%2Fbit.ly%2F1IImn1N";  //CHANGE THIS
 			//CHANGE THIS //CHANGE THIS //CHANGE THIS //CHANGE THIS //CHANGE THIS //CHANGE THIS //CHANGE THIS //CHANGE THIS
 
-			var hashtags = "Cowboys";
-
-			var leadText = "My picks for the Dallas Cowboys’ draft: " + firstRoundName + ", " + secondRoundName + ", " + thirdRoundName + ". Who would you pick?";
+			var leadText = "My Dallas #Cowboys draft: " + firstRoundName + ", " + secondRoundName + ", " + thirdRoundName + ". Who would you pick?";
 
 			$("#facebookButton").click(function () {
 				//Facebook share
-				console.log("Share to Facebook");
+				//console.log("Share to Facebook");
 				FB.ui({
 					method: 'feed',
 					name: storyTitle,
@@ -458,9 +403,9 @@ $(document).ready(function () {
 			});
 
 			$("#twitterButton").click(function () {
-				console.log("Share to Twitter:\nstoryURL: " + storyURL + "\nstoryTitle: " + storyTitle + "\nleadText: " + leadText + "\nstoryIMG: " + storyIMG);
+				//console.log("Share to Twitter:\nstoryURL: " + storyURL + "\nstoryTitle: " + storyTitle + "\nleadText: " + leadText + "\nstoryIMG: " + storyIMG);
 				//Twitter share quizShare
-				window.open("https://www.twitter.com/intent/tweet?&hashtags=" + hashtags + "&text=" + leadText + "&via=dallasnews&url=" + uriLink + "&image=" + storyIMG, "top=200, left=200,width=550,height=420");
+				window.open("https://www.twitter.com/intent/tweet?&hashtags=" + "&text=" + leadText + "&via=dallasnews&url=" + uriLink + "&image=" + storyIMG, "top=200, left=200,width=550,height=420");
 			});
 
 
@@ -522,7 +467,7 @@ var color = d3.scale.ordinal()
 	.range([cowboyBlue, darkgray]);
 
 function drawCharts(data, target) {
-	console.log("in drawCharts with " + data + " and " + target);
+	//console.log("in drawCharts with " + data + " and " + target);
 
 	$("#" + target + " svg").remove();
 
