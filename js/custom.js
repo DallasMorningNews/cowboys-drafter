@@ -186,6 +186,7 @@ $(document).ready(function () {
 		if (pickThree === true) {
 			//console.log('three');
 			
+			$('#finalizeDraft').show();
 			//building the divs of the players picked to populate the #yourpicks div
 			var draftOutput = "";
 
@@ -387,7 +388,7 @@ $(document).ready(function () {
 			var uriLink="http%3A%2F%2Fbit.ly%2F1IImn1N";  //CHANGE THIS
 			//CHANGE THIS //CHANGE THIS //CHANGE THIS //CHANGE THIS //CHANGE THIS //CHANGE THIS //CHANGE THIS //CHANGE THIS
 
-			var leadText = "My Dallas #Cowboys draft: " + firstRoundName + ", " + secondRoundName + ", " + thirdRoundName + ". Who would you pick?";
+			var leadText = "My Dallas Cowboys draft: " + firstRoundName + ", " + secondRoundName + ", " + thirdRoundName + ". Who would you pick?";
 
 			$("#facebookButton").click(function () {
 				//Facebook share
