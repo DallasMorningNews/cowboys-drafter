@@ -36,11 +36,10 @@ $(document).ready(function () {
 			var roundSubmitted = $(this).data('round'); //grabs the round we're making a pick in
 			var playerSelected = $('#' + roundSubmitted).find('.selectedPlayer').data('playerid'); //gets the id of the player selected
 			var nextRound = $(this).attr('href'); //grabs the next round id, so we know where to scroll to
-			var roundInt = $(this).data('roundint');
-			makePick(roundSubmitted, playerSelected, nextRound, roundInt);
-			//positionSelection(roundInt, "qb", $(nextRound));
-			//$(nextRound).find("li:first-of-type").addClass("activePosition");
-			$(nextRound).find(".positions li:first-of-type").trigger("click");
+			var roundInt = $(this).data('roundint'); //grabs the numerical equivalent to our round
+			makePick(roundSubmitted, playerSelected, nextRound, roundInt); // run the function that makes our pick for that round, and advances us to the next round
+ 
+			$(nextRound).find(".positions li:first-of-type").trigger("click"); //simulate a click on the QB button for the next round so that round is populated with some content by default
 
 		})
 	}
@@ -98,6 +97,8 @@ $(document).ready(function () {
 				playerModules += "<header class='playerHead'>";
 				playerModules += "<h1 class='playerPos'>" + position + "</h1>";
 				playerModules += "<h3 class='playerName'>" + value.firstname + " <span class='lastName'>" + value.lastname + "</span></h3>";
+
+				// if machota picks this guys, add the machota's pick badge
 				if (value.machota === "X") {
 					playerModules += "<p class='machotaPick'>Machota's pick</p>";
 				}
@@ -107,6 +108,8 @@ $(document).ready(function () {
 				playerModules += "<p class='playerStat'><span class='label'>Height</span> " + value.playerheight + "</p>";
 				playerModules += "<p class='playerStat lastStat'><span class='label'>Weight</span> " + value.playerweight + "</p>";
 				playerModules += "</div>";
+
+				// if there's a blurb for a player (written by Sturm or the staff), add that blurb to the player's module
 				if (playerPool[key].sturmsays) {
 					playerModules += "<p class='blurb'><strong>BOB STURM SAYS: </strong>" + value.sturmsays + " <a target='_blank' href='" + value.sturmlink + "'>Read More.</a></p>";
 				}
@@ -137,7 +140,7 @@ $(document).ready(function () {
 		displayPlayer(); //run the function that controls display a player
 	}
 
-	positionSelection(1, "qb", $("#round1"))
+	positionSelection(1, "qb", $("#round1")) //populate the first round with the QBs for the initial view
 
 	/*
 	----------------------------------
@@ -186,7 +189,8 @@ $(document).ready(function () {
 		if (pickThree === true) {
 			//console.log('three');
 			
-			$('#finalizeDraft').show();
+			$('#finalizeDraft').show(); //show the button that lets the user submit their draft 
+
 			//building the divs of the players picked to populate the #yourpicks div
 			var draftOutput = "";
 
@@ -211,7 +215,7 @@ $(document).ready(function () {
 
 			}
 
-			$('#playersPicked').html(draftOutput);
+			$('#playersPicked').html(draftOutput); 
 
 			$('#yourPicks .player').removeClass('selectedPlayer'); // remove any selectedPlayer styling from those picks
 			$('html,body').animate({
