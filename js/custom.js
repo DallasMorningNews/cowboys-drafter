@@ -110,9 +110,17 @@ $(document).ready(function () {
 				playerModules += "</div>";
 
 				// if there's a blurb for a player (written by Sturm or the staff), add that blurb to the player's module
-				if (playerPool[key].sturmsays) {
-					playerModules += "<p class='blurb'><strong>SCOUTING REPORT: </strong>" + value.sturmsays + " <a target='_blank' href='" + value.sturmlink + "'>Read More.</a></p>";
+
+				playerModules += "<p class='blurb'><strong>SCOUTING REPORT: </strong>" + value.sturmsays; 
+
+
+				if (playerPool[key].sturmlink) {
+					playerModules += " <a target='_blank' href='" + value.sturmlink + "'>Read More.</a></p>";
+				} else {
+					playerModules += "</p>";
 				}
+
+
 				playerModules += "<a href='#round" + (round + 1) + "' class='roundSubmitter' data-round='round" + round + "' data-roundInt='" + round + "'>Draft " + value.firstname + " " + value.lastname + "</a>"
 				playerModules += "</div>";
 			}
